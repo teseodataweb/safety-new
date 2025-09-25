@@ -1,0 +1,573 @@
+/* ========================================
+   AP Safety - Estilos Personalizados Corporativos
+   Paleta de Colores Oficial
+   ======================================== */
+
+:root {
+    /* Colores Corporativos AP Safety */
+    --ap-negro-principal: #000000;
+    --ap-negro-secundario: #020202;
+    --ap-negro-terciario: #030303;
+    --ap-negro-texto: #010101;
+    --ap-verde-corporativo: #015a4a;
+    --ap-verde-oscuro: #013d33;
+
+    /* Colores de apoyo */
+    --ap-gris-claro: #f5f5f5;
+    --ap-gris-medio: #888888;
+    --ap-blanco: #ffffff;
+    --ap-verde-hover: #006650;
+    --ap-sombra: rgba(0, 77, 60, 0.1);
+    --ap-overlay: rgba(4, 33, 25, 0.9);
+}
+
+/* ========================================
+   Sobreescritura de Colores Base
+   ======================================== */
+
+/* Botones principales */
+.thm-btn {
+    background-color: var(--ap-verde-corporativo) !important;
+    border-color: var(--ap-verde-corporativo) !important;
+    color: var(--ap-blanco) !important;
+    transition: all 0.3s ease;
+}
+
+.thm-btn:hover {
+    background-color: var(--ap-verde-oscuro) !important;
+    border-color: var(--ap-verde-oscuro) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--ap-sombra);
+}
+
+/* Headers y títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--ap-negro-principal) !important;
+}
+
+.section-title__title {
+    color: var(--ap-negro-principal) !important;
+}
+
+.section-title__tagline {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.section-title__tagline-border {
+    background-color: var(--ap-verde-corporativo) !important;
+}
+
+/* Navegación principal */
+.main-menu {
+    background-color: var(--ap-blanco) !important;
+    border-bottom: 2px solid var(--ap-verde-corporativo);
+}
+
+.main-menu__list > li > a {
+    color: var(--ap-negro-principal) !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-menu__list > li > a:hover,
+.main-menu__list > li.current > a {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* Dropdown menus */
+.main-menu__list .dropdown ul {
+    background-color: var(--ap-blanco) !important;
+    border-top: 3px solid var(--ap-verde-corporativo) !important;
+    box-shadow: 0 10px 30px var(--ap-sombra);
+}
+
+.main-menu__list .dropdown ul li a {
+    color: var(--ap-negro-secundario) !important;
+}
+
+.main-menu__list .dropdown ul li a:hover {
+    background-color: var(--ap-verde-corporativo) !important;
+    color: var(--ap-blanco) !important;
+}
+
+/* Call to Action principal */
+.main-menu__call-number a {
+    color: var(--ap-verde-corporativo) !important;
+    font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--ap-negro-principal) !important;
+}
+
+.site-footer__top {
+    background-color: var(--ap-negro-secundario) !important;
+}
+
+.footer-widget__title {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.footer-widget__list li a {
+    color: var(--ap-gris-claro) !important;
+}
+
+.footer-widget__list li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* ========================================
+   Hero Section Personalizado
+   ======================================== */
+
+.main-slider-one__content {
+    background: linear-gradient(135deg, var(--ap-overlay) 0%, rgba(0, 77, 60, 0.8) 100%);
+    padding: 50px 40px;
+    border-radius: 10px;
+}
+
+.main-slider-one__title {
+    color: var(--ap-blanco) !important;
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-slider-one__text {
+    color: var(--ap-gris-claro) !important;
+}
+
+/* Botones CTA del Hero */
+.hero-cta-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-cta {
+    background-color: var(--ap-verde-corporativo) !important;
+    color: var(--ap-blanco) !important;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--ap-verde-corporativo);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary-cta:hover {
+    background-color: var(--ap-verde-oscuro) !important;
+    border-color: var(--ap-verde-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px var(--ap-sombra);
+}
+
+.btn-secondary-cta {
+    background-color: transparent !important;
+    color: var(--ap-blanco) !important;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid var(--ap-blanco);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-secondary-cta:hover {
+    background-color: var(--ap-blanco) !important;
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* ========================================
+   Certificaciones y Badges
+   ======================================== */
+
+.certification-badge {
+    display: inline-block;
+    background: var(--ap-verde-corporativo);
+    color: var(--ap-blanco);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.certification-item {
+    text-align: center;
+    padding: 20px;
+    background: var(--ap-blanco);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--ap-sombra);
+    transition: transform 0.3s ease;
+}
+
+.certification-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--ap-sombra);
+}
+
+.certification-item img {
+    max-height: 80px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.certification-item h4 {
+    color: var(--ap-verde-corporativo);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.certification-item p {
+    color: var(--ap-gris-medio);
+    font-size: 12px;
+}
+
+/* ========================================
+   Productos y Catálogo
+   ======================================== */
+
+.product-card {
+    background: var(--ap-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px var(--ap-sombra);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--ap-sombra);
+}
+
+.product-card__badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.product-card__badge {
+    display: inline-block;
+    background: var(--ap-verde-corporativo);
+    color: var(--ap-blanco);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.product-filter-section {
+    background: var(--ap-gris-claro);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: var(--ap-blanco);
+    color: var(--ap-negro-principal);
+    border: 2px solid var(--ap-verde-corporativo);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--ap-verde-corporativo);
+    color: var(--ap-blanco);
+}
+
+/* ========================================
+   Iconos y Servicios
+   ======================================== */
+
+.services-three__icon {
+    color: var(--ap-verde-corporativo) !important;
+    font-size: 60px;
+}
+
+.services-three__single:hover .services-three__icon {
+    animation: pulse-ap 1s infinite;
+}
+
+@keyframes pulse-ap {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.services-three__learn-more {
+    color: var(--ap-verde-corporativo) !important;
+    font-weight: 600;
+}
+
+.services-three__learn-more:hover {
+    color: var(--ap-verde-oscuro) !important;
+}
+
+/* ========================================
+   Formularios
+   ======================================== */
+
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--ap-verde-corporativo) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px var(--ap-sombra);
+}
+
+/* ========================================
+   Industrias
+   ======================================== */
+
+.industry-card {
+    background: linear-gradient(135deg, var(--ap-verde-corporativo) 0%, var(--ap-verde-oscuro) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    color: var(--ap-blanco);
+    transition: transform 0.3s ease;
+}
+
+.industry-card:hover {
+    transform: scale(1.05);
+}
+
+.industry-card__icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.industry-card__title {
+    color: var(--ap-blanco) !important;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.industry-card__list {
+    list-style: none;
+    padding: 0;
+}
+
+.industry-card__list li {
+    padding: 5px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.industry-card__list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--ap-verde-corporativo);
+    font-weight: bold;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+    .main-slider-one__title {
+        font-size: 32px;
+    }
+
+    .hero-cta-container {
+        flex-direction: column;
+    }
+
+    .btn-primary-cta,
+    .btn-secondary-cta {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .certification-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* ========================================
+   Animaciones Adicionales
+   ======================================== */
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   Utilidades
+   ======================================== */
+
+.text-verde-corporativo {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.bg-verde-corporativo {
+    background-color: var(--ap-verde-corporativo) !important;
+}
+
+.border-verde-corporativo {
+    border-color: var(--ap-verde-corporativo) !important;
+}
+
+/* ========================================
+   Override del color naranja #f36f21
+   ======================================== */
+
+/* Reemplazar todos los usos del color naranja */
+[style*="#f36f21"] {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+[style*="color: #f36f21"],
+[style*="color:#f36f21"] {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+[style*="background: #f36f21"],
+[style*="background:#f36f21"],
+[style*="background-color: #f36f21"],
+[style*="background-color:#f36f21"] {
+    background-color: var(--ap-verde-corporativo) !important;
+}
+
+[style*="border-color: #f36f21"],
+[style*="border-color:#f36f21"] {
+    border-color: var(--ap-verde-corporativo) !important;
+}
+
+/* Gradientes con color naranja */
+[style*="linear-gradient"][style*="#f36f21"],
+[style*="linear-gradient"][style*="#ff8c42"] {
+    background: linear-gradient(135deg, var(--ap-verde-corporativo) 0%, var(--ap-verde-oscuro) 100%) !important;
+}
+
+/* Iconos con clases específicas */
+.fa-check,
+.fa-download,
+.fa-play-circle,
+.fa-image,
+.fa-presentation,
+.fa-user-graduate,
+.fa-clipboard-check,
+.fa-chart-line,
+.fa-video,
+.fa-file-pdf,
+.fa-certificate,
+.fa-book {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* Estilos inline específicos de las páginas de información técnica */
+.faq-one__icon {
+    font-size: 32px !important;
+    color: var(--ap-verde-corporativo) !important;
+    margin-bottom: 25px !important;
+}
+
+.faq-one__icon span {
+    color: inherit !important;
+    font-size: inherit !important;
+}
+
+.faq-one__single {
+    background: #fff !important;
+    padding: 40px 30px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
+    margin-bottom: 30px !important;
+    transition: all .3s ease !important;
+}
+
+.faq-one__single:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.faq-one__title {
+    color: #1a1a1a !important;
+    margin-bottom: 25px !important;
+}
+
+.faq-one__single ul li a {
+    color: #666 !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: color .3s ease !important;
+}
+
+.faq-one__single ul li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.faq-one__single ul li a i {
+    color: var(--ap-verde-corporativo) !important;
+    margin-right: 10px !important;
+    font-size: 14px !important;
+}
+
+/* Secciones con fondo de gradiente */
+.distributor-form[style*="background: linear-gradient"] {
+    background: linear-gradient(135deg, var(--ap-verde-corporativo) 0%, var(--ap-verde-oscuro) 100%) !important;
+}
+
+/* Botones con color naranja */
+button[style*="background: #f36f21"],
+.thm-btn[style*="background: #f36f21"] {
+    background: var(--ap-verde-corporativo) !important;
+    color: white !important;
+}
+
+button[style*="background: #f36f21"]:hover,
+.thm-btn[style*="background: #f36f21"]:hover {
+    background: var(--ap-verde-oscuro) !important;
+}
