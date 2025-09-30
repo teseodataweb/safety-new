@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos - AP Safety | EPP Certificado</title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Catálogo completo de Equipos de Protección Personal certificados. Mascarillas N95, N99, P95, respiradores con válvula y más. Certificados NOM, ANSI, ISO." />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&amp;display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/custom-animate.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome-all.css" />
+    <link rel="stylesheet" href="assets/css/jarallax.css" />
+    <link rel="stylesheet" href="assets/css/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/odometer.min.css" />
+
+
+    <link rel="stylesheet" href="assets/css/module-css/slider.css" />
+    <link rel="stylesheet" href="assets/css/module-css/footer.css" />
+    <link rel="stylesheet" href="assets/css/module-css/page-header.css" />
+    <link rel="stylesheet" href="assets/css/module-css/shop.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/ap-safety-custom.css" />
+
+    <!-- Estilos adicionales para el catálogo -->
+    <style>
+        .product-filters {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .filter-section {
+            margin-bottom: 25px;
+        }
+
+        .filter-section h4 {
+            color: var(--ap-verde-corporativo);
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-tag {
+            padding: 8px 16px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .filter-tag i {
+            font-size: 12px;
+            color: var(--ap-verde-corporativo);
+        }
+
+        .filter-tag:hover {
+            border-color: var(--ap-verde-corporativo);
+            background: #f0f8f6;
+        }
+
+        .filter-tag.active {
+            background: var(--ap-verde-corporativo);
+            color: white;
+            border-color: var(--ap-verde-corporativo);
+        }
+
+        .filter-tag.active i {
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card-new {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card-new:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-card-new__image {
+            position: relative;
+            height: 250px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-card-new__image img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        .product-card-new__badges {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .product-badge {
+            background: var(--ap-verde-corporativo);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .product-badge.badge-new {
+            background: #ff4444;
+        }
+
+        .product-card-new__content {
+            padding: 20px;
+        }
+
+        .product-card-new__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .product-card-new__protection {
+            color: var(--ap-verde-corporativo);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-card-new__features {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            max-height: 60px;
+            overflow: hidden;
+        }
+
+        .product-card-new__actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .product-btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .product-btn.btn-primary {
+            background: var(--ap-verde-corporativo);
+            color: white;
+        }
+
+        .product-btn.btn-primary:hover {
+            background: var(--ap-verde-oscuro);
+        }
+
+        .product-btn.btn-secondary {
+            background: white;
+            color: var(--ap-verde-corporativo);
+            border: 2px solid var(--ap-verde-corporativo);
+        }
+
+        .product-btn.btn-secondary:hover {
+            background: var(--ap-verde-corporativo);
+            color: white;
+        }
+
+        .search-bar-section {
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 15px 20px;
+            padding-right: 120px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--ap-verde-corporativo);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--ap-verde-corporativo);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background: var(--ap-verde-oscuro);
+        }
+
+        .results-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .results-count {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .results-count strong {
+            color: var(--ap-verde-corporativo);
+            font-weight: 700;
+        }
+
+        .sort-dropdown {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sort-dropdown select {
+            padding: 8px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .no-results i {
+            font-size: 60px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .no-results h3 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .no-results p {
+            color: #999;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            .filter-tags {
+                gap: 8px;
+            }
+
+            .filter-tag {
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+
+            .results-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-card-new__actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body class="custom-cursor">
+
+    <div class="custom-cursor__cursor"></div>
+    <div class="custom-cursor__cursor-two"></div>
+
+    <!--Start Preloader-->
+    <div class="loader js-preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!--End Preloader-->
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
+        </div>
+        <div class="page-header__shape-one">
+            <img src="assets/images/shapes/page-header-shape-1.png" alt="">
+        </div>
+        <div class="page-header__shape-two">
+            <img src="assets/images/shapes/page-header-shape-2.png" alt="">
+        </div>
+        <div class="page-header__shape-three">
+            <img src="assets/images/shapes/page-header-shape-3.png" alt="">
+        </div>
+        <div class="container">
+            <div class="page-header__inner">
+                <h2>Catálogo de Productos</h2>
+                <div class="thm-breadcrumb__box">
+                    <ul class="thm-breadcrumb">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><span class="icon-angle-left"></span></li>
+                        <li>Productos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Header End-->
+
+    <!--Product Start-->
+    <section class="product">
+        <div class="container">
+            <!-- Barra de búsqueda -->
+            <div class="search-bar-section">
+                <div class="search-bar">
+                    <input type="text" id="product-search" placeholder="Buscar por nombre, certificación o aplicación...">
+                    <button type="button">
+                        <i class="fa fa-search"></i> Buscar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filtros -->
+            <div class="product-filters">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="filter-section">
+                            <h4><i class="fa fa-filter"></i> Categorías</h4>
+                            <div class="filter-tags" id="category-filters">
+                                <span class="filter-tag active" data-filter="all">
+                                    <i class="fa fa-th"></i> Todos
+                                </span>
+                                <span class="filter-tag" data-filter="mascarilla-desechable">
+                                    <i class="fa fa-head-side-mask"></i> Mascarillas Desechables
+                                </span>
+                                <span class="filter-tag" data-filter="respirador-infantil">
+                                    <i class="fa fa-child"></i> Respiradores Infantiles
+                                </span>
+                                <span class="filter-tag" data-filter="n95">
+                                    <i class="fa fa-shield-virus"></i> N95
+                                </span>
+                                <span class="filter-tag" data-filter="n99">
+                                    <i class="fa fa-shield-alt"></i> N99
+                                </span>
+                                <span class="filter-tag" data-filter="p95">
+                                    <i class="fa fa-shield-virus"></i> P95
+                                </span>
+                                <span class="filter-tag" data-filter="valvula">
+                                    <i class="fa fa-wind"></i> Con Válvula
+                                </span>
+                                <span class="filter-tag" data-filter="carbon-activado">
+                                    <i class="fa fa-filter"></i> Carbón Activado
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de resultados -->
+            <div class="results-info">
+                <div class="results-count">
+                    Mostrando <strong id="product-count">0</strong> productos
+                </div>
+                <div class="sort-dropdown">
+                    <label>Ordenar por:</label>
+                    <select id="sort-products">
+                        <option value="default">Más relevantes</option>
+                        <option value="name-asc">Nombre (A-Z)</option>
+                        <option value="name-desc">Nombre (Z-A)</option>
+                        <option value="certification">Certificación</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de productos -->
+            <div class="product-grid" id="products-container">
+                <!-- Los productos se cargarán aquí dinámicamente -->
+            </div>
+
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fa fa-search"></i>
+                <h3>No se encontraron productos</h3>
+                <p>Intenta ajustar los filtros o cambiar tu búsqueda</p>
+            </div>
+        </div>
+    </section>
+    <!--Product End-->
+
+    <!--Site Footer Start-->
+    <footer class="site-footer">
+        <!-- Footer content (mantener el mismo del archivo original) -->
+    </footer>
+    <!--Site Footer End-->
+
+    </div><!-- /.page-wrapper -->
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
+        <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
+        <span class="scroll-to-top__text"> Ir arriba</span>
+    </a>
+
+    <script src="assets/js/jquery-latest.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jarallax.min.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/wNumb.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/jquery.circleType.js"></script>
+    <script src="assets/js/jquery.fittext.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+    <script src="assets/js/jquery-sidebar-content.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/gsap/gsap.js"></script>
+    <script src="assets/js/gsap/ScrollTrigger.js"></script>
+    <script src="assets/js/gsap/SplitText.js"></script>
+
+    <!-- template js -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Cargar base de datos de productos -->
+    <script src="assets/js/ap-safety-products-data.js"></script>
+
+    <!-- Script del catálogo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productsContainer = document.getElementById('products-container');
+            const productCount = document.getElementById('product-count');
+            const searchInput = document.getElementById('product-search');
+            const sortSelect = document.getElementById('sort-products');
+            const categoryFilters = document.querySelectorAll('[data-filter]');
+            const noResultsDiv = document.getElementById('no-results');
+
+            let currentProducts = [...apSafetyProducts];
+            let currentFilter = 'all';
+
+            // Función para renderizar productos
+            function renderProducts(products) {
+                if (products.length === 0) {
+                    productsContainer.style.display = 'none';
+                    noResultsDiv.style.display = 'block';
+                    productCount.textContent = '0';
+                    return;
+                }
+
+                productsContainer.style.display = 'grid';
+                noResultsDiv.style.display = 'none';
+                productCount.textContent = products.length;
+
+                productsContainer.innerHTML = products.map(product => `
+                    <div class="product-card-new" data-category="${product.category}" data-id="${product.id}">
+                        <div class="product-card-new__image">
+                            ${product.image ?
+                                `<img src="${product.image}" alt="${product.name}" onerror="this.style.display='none'">` :
+                                `<div style="font-size: 60px; color: #e0e0e0;"><i class="fa fa-head-side-mask"></i></div>`
+                            }
+                            <div class="product-card-new__badges">
+                                ${product.certification.map(cert =>
+                                    `<span class="product-badge">${cert}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+                        <div class="product-card-new__content">
+                            <h3 class="product-card-new__title">${product.name}</h3>
+                            <div class="product-card-new__protection">${product.protection}</div>
+                            <div class="product-card-new__features">
+                                ${product.features.slice(0, 2).join(' • ')}
+                            </div>
+                            <div class="product-card-new__actions">
+                                ${product.pdfUrl ?
+                                    `<a href="${product.pdfUrl}" target="_blank" class="product-btn btn-secondary">
+                                        <i class="fa fa-file-pdf"></i> Ficha Técnica
+                                    </a>` : ''
+                                }
+                                <button class="product-btn btn-primary" onclick="showProductDetail('${product.id}')">
+                                    <i class="fa fa-eye"></i> Ver más
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Función para filtrar productos
+            function filterProducts() {
+                let filtered = [...apSafetyProducts];
+
+                // Aplicar filtro de categoría
+                if (currentFilter !== 'all') {
+                    filtered = getProductsByCategory(currentFilter);
+                }
+
+                // Aplicar filtro de búsqueda
+                const searchTerm = searchInput.value.toLowerCase().trim();
+                if (searchTerm) {
+                    filtered = filtered.filter(product => {
+                        return product.name.toLowerCase().includes(searchTerm) ||
+                               product.protection.toLowerCase().includes(searchTerm) ||
+                               product.applications.toLowerCase().includes(searchTerm) ||
+                               product.features.some(f => f.toLowerCase().includes(searchTerm)) ||
+                               product.certification.some(c => c.toLowerCase().includes(searchTerm));
+                    });
+                }
+
+                currentProducts = filtered;
+                sortProducts();
+            }
+
+            // Función para ordenar productos
+            function sortProducts() {
+                let sorted = [...currentProducts];
+
+                switch(sortSelect.value) {
+                    case 'name-asc':
+                        sorted.sort((a, b) => a.name.localeCompare(b.name));
+                        break;
+                    case 'name-desc':
+                        sorted.sort((a, b) => b.name.localeCompare(a.name));
+                        break;
+                    case 'certification':
+                        sorted.sort((a, b) => {
+                            const certA = a.certification.join(',');
+                            const certB = b.certification.join(',');
+                            return certA.localeCompare(certB);
+                        });
+                        break;
+                }
+
+                renderProducts(sorted);
+            }
+
+            // Event listeners
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.dataset.filter;
+                    filterProducts();
+                });
+            });
+
+            searchInput.addEventListener('input', filterProducts);
+            sortSelect.addEventListener('change', sortProducts);
+
+            // Función para mostrar detalle del producto (modal)
+            window.showProductDetail = function(productId) {
+                const product = apSafetyProducts.find(p => p.id === productId);
+                if (!product) return;
+
+                // Aquí puedes implementar un modal o redirección
+                alert(`Producto: ${product.name}\n\nProtección: ${product.protection}\n\nAplicaciones: ${product.applications}\n\nCaracterísticas:\n${product.features.join('\n')}`);
+            };
+
+            // Renderizar productos inicialmente
+            renderProducts(apSafetyProducts);
+        });
+    </script>
+</body>
+
+</html>
