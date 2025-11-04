@@ -2,7 +2,7 @@
 // ===========================================
 // 📬 CONFIGURACIÓN DEL CORREO
 // ===========================================
-$to = "ho0m3r02004@gmail.com"; 
+$to = "operaciones@apmascarillas.com.mx"; 
 $subject = "Nuevo mensaje desde el formulario de contacto";
 
 // ===========================================
