@@ -489,7 +489,7 @@
                         <i class="fa fa-mask"></i>
                         <span>Respiradores Reutilizables</span>
                     </div>
-                    <div class="category-tab" data-category="filtros-cartuchos">
+                    <div class="category-tab" data-category="filtros-cartuchos, vapores-organicos">
                         <i class="fa fa-filter"></i>
                         <span>Filtros y Cartuchos</span>
                     </div>
@@ -750,16 +750,22 @@
 
         // Configurar event listeners
         function setupEventListeners() {
-            // Tabs de categorías
+            // Tabs de categorías (ahora soporta múltiples categorías)
             document.querySelectorAll('.category-tab').forEach(tab => {
                 tab.addEventListener('click', function() {
+                    // Quitar clase activa de todas y activar la actual
                     document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
                     this.classList.add('active');
+
+                    // Guardar categorías (una o varias separadas por coma)
                     currentCategory = this.dataset.category;
                     currentPage = 1;
+
+                    // Ejecutar filtro
                     filterProducts();
                 });
             });
+
 
             // Búsqueda en tiempo real
             const searchInput = document.getElementById('product-search');
@@ -794,10 +800,12 @@
         function filterProducts() {
             filteredProducts = [...window.allProducts];
 
-            // Filtrar por categoría
+            // Filtrar por categoría (ahora admite múltiples separadas por coma)
             if (currentCategory && currentCategory !== 'all') {
-                filteredProducts = filteredProducts.filter(p => p.category === currentCategory);
+                const selectedCategories = currentCategory.split(',').map(c => c.trim().toLowerCase());
+                filteredProducts = filteredProducts.filter(p => selectedCategories.includes(p.category.toLowerCase()));
             }
+
 
             // Filtrar por certificación
             const certFilter = document.getElementById('certification-filter').value;

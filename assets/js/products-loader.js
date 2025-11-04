@@ -13,6 +13,7 @@ async function loadAllProductsFromJSON() {
     }
 }
 
+
 // Función para procesar y normalizar los datos del JSON
 function processProductData(rawProduct) {
     // Generar ID único basado en el nombre
@@ -28,7 +29,7 @@ function processProductData(rawProduct) {
         category = 'respirador-reutilizable';
     } else if (tipo.includes('filtro') || tipo.includes('cartucho')) {
         category = 'filtros-cartuchos';
-    } else if (tipo.includes('lente') || tipo.includes('visual')) {
+    } else if (tipo.includes('lente') ){
         category = 'proteccion-visual';
     } else if (tipo.includes('auditiv') || tipo.includes('oído') || tipo.includes('tapón')) {
         category = 'proteccion-auditiva';
