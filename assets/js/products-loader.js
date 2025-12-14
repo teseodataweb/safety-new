@@ -1,5 +1,26 @@
 // Script para cargar TODOS los productos de AP Safety desde el JSON
-// Este archivo procesará los 91 productos extraídos
+// Actualizado para 591 productos con nueva estructura
+
+// Mapeo de categorías del JSON a categorías de filtro
+const categoryMapping = {
+    'Equipos SCBA y Respiración Autónoma': 'equipos-scba',
+    'Respiradores Desechables N95/P95': 'respiradores-n95',
+    'Respiradores Reutilizables': 'respiradores-reutilizables',
+    'Mascarillas Desechables': 'mascarillas',
+    'Mascarillas Infantiles': 'mascarillas-infantiles',
+    'Cubrebocas Desechables': 'cubrebocas',
+    'Guantes de Protección': 'guantes',
+    'Ropa de Protección': 'ropa-proteccion',
+    'Calzado de Seguridad': 'calzado',
+    'Accesorios para Cabeza': 'cabeza',
+    'Protección Visual': 'proteccion-visual',
+    'Protección Auditiva': 'proteccion-auditiva',
+    'Fajas y Soporte Lumbar': 'fajas',
+    'Señalización y Vialidad': 'senalizacion',
+    'Protección de Brazos': 'ropa-proteccion',
+    'Accesorios y Refacciones': 'accesorios',
+    'Otros': 'accesorios'
+};
 
 // Función para cargar productos desde el archivo JSON
 async function loadAllProductsFromJSON() {
@@ -13,105 +34,57 @@ async function loadAllProductsFromJSON() {
     }
 }
 
-// Función para procesar y normalizar los datos del JSON
+// Función para procesar y normalizar los datos del JSON (nueva estructura)
 function processProductData(rawProduct) {
-    // Generar ID único basado en el nombre
-    const id = rawProduct.nombre.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    // Generar ID único
+    const id = rawProduct.clave || rawProduct.nombre.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 
-    // Determinar categoría basada en tipo
-    let category = 'mascarilla-desechable';
-    const tipo = rawProduct.tipo_categoria.toLowerCase();
+    // Mapear categoría
+    const category = categoryMapping[rawProduct.categoria] || 'accesorios';
 
-    if (tipo.includes('niño') || tipo.includes('infantil')) {
-        category = 'respirador-infantil';
-    } else if (tipo.includes('reutilizable')) {
-        category = 'respirador-reutilizable';
-    } else if (tipo.includes('filtro') || tipo.includes('cartucho')) {
-        category = 'filtros-cartuchos';
-    } else if (tipo.includes('lente') || tipo.includes('visual')) {
-        category = 'proteccion-visual';
-    } else if (tipo.includes('auditiv') || tipo.includes('oído') || tipo.includes('tapón')) {
-        category = 'proteccion-auditiva';
-    } else if (tipo.includes('guante')) {
-        category = 'guantes';
-    } else if (tipo.includes('casco')) {
-        category = 'cascos';
-    } else if (tipo.includes('calzado') || tipo.includes('bota')) {
-        category = 'calzado-seguridad';
-    } else if (tipo.includes('traje') || tipo.includes('overol')) {
-        category = 'ropa-proteccion';
-    } else if (tipo.includes('arnes') || tipo.includes('altura')) {
-        category = 'proteccion-alturas';
-    }
-
-    // Extraer certificaciones del texto
-    const certifications = [];
-    const textoCompleto = (rawProduct.texto_adicional + ' ' + rawProduct.caracteristicas + ' ' + rawProduct.aplicaciones).toUpperCase();
-
-    if (textoCompleto.includes('N95')) certifications.push('N95');
-    if (textoCompleto.includes('N99')) certifications.push('N99');
-    if (textoCompleto.includes('N100')) certifications.push('N100');
-    if (textoCompleto.includes('P95')) certifications.push('P95');
-    if (textoCompleto.includes('P100')) certifications.push('P100');
-    if (textoCompleto.includes('R95')) certifications.push('R95');
-    if (textoCompleto.includes('NIOSH')) certifications.push('NIOSH');
-    if (textoCompleto.includes('NOM-116')) certifications.push('NOM-116-STPS-2009');
-    if (textoCompleto.includes('NMX-S-054')) certifications.push('NMX-S-054-SCFI-2013');
-    if (textoCompleto.includes('ANSI')) certifications.push('ANSI');
-    if (textoCompleto.includes('ISO')) certifications.push('ISO');
-    if (textoCompleto.includes('CE')) certifications.push('CE');
-
-    // Limpiar y formatear características
-    let features = rawProduct.caracteristicas || '';
-    if (features.includes('\n')) {
-        features = features.split('\n').filter(f => f.trim()).join('. ');
-    }
-
-    // Limpiar aplicaciones
-    let applications = rawProduct.aplicaciones || '';
-    if (applications.includes('\n')) {
-        applications = applications.split('\n').filter(a => a.trim()).join('. ');
-    }
+    // Procesar certificaciones (ya vienen como array en el nuevo JSON)
+    const certifications = rawProduct.certificaciones || [];
 
     return {
         id: id,
+        numericId: rawProduct.id,
         name: rawProduct.nombre,
+        code: rawProduct.clave,
         category: category,
-        type: rawProduct.tipo_categoria,
-        protection: rawProduct.proteccion || 'Protección especializada',
-        applications: applications,
-        features: features,
-        videoUrl: rawProduct.url_video || '',
-        pdfUrl: rawProduct.url_ficha_tecnica || '',
+        categoryName: rawProduct.categoria,
+        line: rawProduct.linea,
+        type: rawProduct.tipo,
+        description: rawProduct.descripcion,
         certification: certifications,
-        image: `assets/images/products/${id}.jpg`,
-        rawText: rawProduct.texto_adicional || '',
-        advantages: rawProduct.ventajas || ''
+        plant: rawProduct.planta,
+        techSheet: rawProduct.ficha_tecnica,
+        packagingUnit: rawProduct.envase_pza,
+        packagingTotal: rawProduct.embalaje,
+        image: `assets/images/products/${id.toLowerCase()}.jpg`,
+        // Campos de compatibilidad con estructura anterior
+        protection: certifications.length > 0 ? certifications.join(', ') : 'Protección especializada',
+        applications: rawProduct.descripcion,
+        features: `Línea: ${rawProduct.linea}. ${rawProduct.descripcion}`,
+        videoUrl: '',
+        pdfUrl: rawProduct.ficha_tecnica && rawProduct.ficha_tecnica.startsWith('IT-') ? '' : rawProduct.ficha_tecnica,
+        advantages: rawProduct.tipo === 'Marca AP' ? 'Producto fabricado por AP Mascarillas con los más altos estándares de calidad.' : 'Producto comercializado con garantía AP Safety.'
     };
 }
 
 // Función para agrupar productos por categoría
 function groupProductsByCategory(products) {
-    const grouped = {
-        'mascarilla-desechable': [],
-        'respirador-infantil': [],
-        'respirador-reutilizable': [],
-        'filtros-cartuchos': [],
-        'proteccion-visual': [],
-        'proteccion-auditiva': [],
-        'guantes': [],
-        'cascos': [],
-        'calzado-seguridad': [],
-        'ropa-proteccion': [],
-        'proteccion-alturas': [],
-        'otros': []
-    };
+    const grouped = {};
+
+    // Inicializar todas las categorías
+    Object.values(categoryMapping).forEach(cat => {
+        if (!grouped[cat]) grouped[cat] = [];
+    });
+    grouped['all'] = [];
 
     products.forEach(product => {
+        grouped['all'].push(product);
         if (grouped[product.category]) {
             grouped[product.category].push(product);
-        } else {
-            grouped['otros'].push(product);
         }
     });
 
@@ -126,11 +99,16 @@ function renderProductHTML(product) {
           ).join('')
         : '';
 
+    const typeBadge = product.type === 'Marca AP'
+        ? '<span class="badge" style="background: #014C3F; color: white; padding: 3px 8px; border-radius: 12px; font-size: 10px;">Marca AP</span>'
+        : '<span class="badge" style="background: #666; color: white; padding: 3px 8px; border-radius: 12px; font-size: 10px;">Distribuido</span>';
+
     return `
         <div class="col-xl-4 col-lg-6 col-md-6 product-item"
              data-category="${product.category}"
              data-id="${product.id}"
-             data-certifications="${product.certification.join(' ')}">
+             data-certifications="${product.certification.join(' ')}"
+             data-type="${product.type}">
             <div class="single-product-style1">
                 <div class="single-product-style1__img">
                     <img src="${product.image}"
@@ -146,39 +124,28 @@ function renderProductHTML(product) {
                     ` : ''}
                 </div>
                 <div class="single-product-style1__content">
-                    <div class="single-product-style1__review">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
+                    <div style="margin-bottom: 8px;">
+                        ${typeBadge}
                     </div>
-                    <h4 class="single-product-style1__title">
+                    <h4 class="single-product-style1__title" style="font-size: 14px; line-height: 1.3; height: 40px; overflow: hidden;">
                         <a href="#" onclick="showProductDetail('${product.id}'); return false;">
                             ${product.name}
                         </a>
                     </h4>
-                    <p class="single-product-style1__price" style="color: var(--ap-verde-corporativo); font-weight: 600; font-size: 14px;">
-                        ${product.protection}
+                    <p class="single-product-style1__price" style="color: var(--ap-verde-corporativo); font-weight: 600; font-size: 12px; margin: 5px 0;">
+                        ${product.categoryName}
                     </p>
-                    <div style="margin: 10px 0;">
+                    <div style="margin: 8px 0; min-height: 25px;">
                         ${certBadges}
                     </div>
-                    <p style="font-size: 12px; color: #666; line-height: 1.4; height: 40px; overflow: hidden;">
-                        ${product.features ? product.features.substring(0, 80) + '...' : product.type}
+                    <p style="font-size: 11px; color: #666; line-height: 1.3; height: 30px; overflow: hidden;">
+                        Código: ${product.code} | ${product.line}
                     </p>
                     <ul class="single-product-style1__info">
                         ${product.pdfUrl ? `
                             <li>
                                 <a href="${product.pdfUrl}" target="_blank" title="Ficha Técnica">
                                     <i class="fa fa-file-pdf"></i>
-                                </a>
-                            </li>
-                        ` : ''}
-                        ${product.videoUrl ? `
-                            <li>
-                                <a href="${product.videoUrl}" target="_blank" title="Ver Video">
-                                    <i class="fa fa-play-circle"></i>
                                 </a>
                             </li>
                         ` : ''}
@@ -211,24 +178,43 @@ window.showProductDetail = function(productId) {
                 <!-- Header con imagen -->
                 <div style="background: linear-gradient(135deg, var(--ap-verde-corporativo), var(--ap-verde-oscuro)); color: white; padding: 30px; border-radius: 15px 15px 0 0; position: relative;">
                     <button onclick="this.closest('.product-modal').remove()" style="position: absolute; top: 20px; right: 20px; background: white; color: var(--ap-verde-corporativo); border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center;">×</button>
-                    <h2 style="margin: 0; font-size: 32px;">${product.name}</h2>
-                    <p style="margin-top: 10px; opacity: 0.9; font-size: 18px;">${product.type}</p>
+                    <span style="background: ${product.type === 'Marca AP' ? '#fff' : 'rgba(255,255,255,0.3)'}; color: ${product.type === 'Marca AP' ? 'var(--ap-verde-corporativo)' : '#fff'}; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600;">${product.type}</span>
+                    <h2 style="margin: 15px 0 0 0; font-size: 28px;">${product.name}</h2>
+                    <p style="margin-top: 10px; opacity: 0.9; font-size: 16px;">Código: ${product.code} | Línea: ${product.line}</p>
                 </div>
 
                 <!-- Contenido -->
                 <div style="padding: 30px;">
-                    <!-- Nivel de protección -->
+                    <!-- Categoría y Planta -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                            <h4 style="color: var(--ap-verde-corporativo); margin: 0 0 8px 0; font-size: 14px;">
+                                <i class="fa fa-tag"></i> Categoría
+                            </h4>
+                            <p style="font-size: 16px; color: #333; margin: 0; font-weight: 600;">${product.categoryName}</p>
+                        </div>
+                        ${product.plant ? `
+                        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                            <h4 style="color: var(--ap-verde-corporativo); margin: 0 0 8px 0; font-size: 14px;">
+                                <i class="fa fa-industry"></i> Planta de Fabricación
+                            </h4>
+                            <p style="font-size: 16px; color: #333; margin: 0; font-weight: 600;">${product.plant}</p>
+                        </div>
+                        ` : ''}
+                    </div>
+
+                    <!-- Descripción -->
                     <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
-                        <h4 style="color: var(--ap-verde-corporativo); margin: 0 0 10px 0; font-size: 18px;">
-                            <i class="fa fa-shield-alt"></i> Nivel de Protección
+                        <h4 style="color: var(--ap-verde-corporativo); margin: 0 0 10px 0; font-size: 16px;">
+                            <i class="fa fa-info-circle"></i> Descripción
                         </h4>
-                        <p style="font-size: 20px; color: #333; margin: 0; font-weight: 600;">${product.protection}</p>
+                        <p style="font-size: 15px; color: #333; margin: 0; line-height: 1.6;">${product.description}</p>
                     </div>
 
                     <!-- Certificaciones -->
                     ${product.certification && product.certification.length > 0 ? `
                         <div style="margin-bottom: 25px;">
-                            <h4 style="color: #333; margin-bottom: 15px; font-size: 18px;">
+                            <h4 style="color: #333; margin-bottom: 15px; font-size: 16px;">
                                 <i class="fa fa-certificate"></i> Certificaciones
                             </h4>
                             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -241,58 +227,40 @@ window.showProductDetail = function(productId) {
                         </div>
                     ` : ''}
 
-                    <!-- Aplicaciones -->
-                    ${product.applications ? `
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #333; margin-bottom: 15px; font-size: 18px;">
-                                <i class="fa fa-industry"></i> Aplicaciones
-                            </h4>
-                            <p style="line-height: 1.8; color: #666; background: #f8f9fa; padding: 15px; border-radius: 8px;">
-                                ${product.applications}
-                            </p>
-                        </div>
-                    ` : ''}
-
-                    <!-- Características -->
-                    ${product.features ? `
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #333; margin-bottom: 15px; font-size: 18px;">
-                                <i class="fa fa-list-ul"></i> Características
-                            </h4>
-                            <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
-                                <p style="line-height: 1.8; color: #666; margin: 0; white-space: pre-line;">
-                                    ${product.features}
-                                </p>
+                    <!-- Información de empaque -->
+                    ${product.packagingUnit || product.packagingTotal ? `
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                            ${product.packagingUnit ? `
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; text-align: center;">
+                                <i class="fa fa-box" style="font-size: 24px; color: var(--ap-verde-corporativo);"></i>
+                                <p style="margin: 10px 0 0 0; font-weight: 600; color: #333;">Envase: ${product.packagingUnit} pzas</p>
                             </div>
+                            ` : ''}
+                            ${product.packagingTotal && product.packagingTotal !== '/' ? `
+                            <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; text-align: center;">
+                                <i class="fa fa-boxes" style="font-size: 24px; color: var(--ap-verde-corporativo);"></i>
+                                <p style="margin: 10px 0 0 0; font-weight: 600; color: #333;">Embalaje: ${product.packagingTotal} pzas</p>
+                            </div>
+                            ` : ''}
                         </div>
                     ` : ''}
 
-                    <!-- Ventajas adicionales -->
-                    ${product.advantages ? `
-                        <div style="margin-bottom: 25px;">
-                            <h4 style="color: #333; margin-bottom: 15px; font-size: 18px;">
-                                <i class="fa fa-star"></i> Ventajas
-                            </h4>
-                            <p style="line-height: 1.8; color: #666;">
-                                ${product.advantages}
+                    <!-- Ficha técnica -->
+                    ${product.techSheet ? `
+                        <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin-bottom: 25px;">
+                            <p style="margin: 0; color: #e65100;">
+                                <i class="fa fa-file-alt"></i> <strong>Código de Ficha Técnica:</strong> ${product.techSheet}
                             </p>
                         </div>
                     ` : ''}
 
                     <!-- Botones de acción -->
                     <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
-                        ${product.pdfUrl ? `
-                            <a href="${product.pdfUrl}" target="_blank" style="background: var(--ap-verde-corporativo); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s;">
-                                <i class="fa fa-file-pdf"></i> Descargar Ficha Técnica
-                            </a>
-                        ` : ''}
-                        ${product.videoUrl ? `
-                            <a href="${product.videoUrl}" target="_blank" style="background: white; color: var(--ap-verde-corporativo); border: 2px solid var(--ap-verde-corporativo); padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s;">
-                                <i class="fa fa-play-circle"></i> Ver Video
-                            </a>
-                        ` : ''}
-                        <a href="contact.html" style="background: #333; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s;">
+                        <a href="contact.html" style="background: var(--ap-verde-corporativo); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s;">
                             <i class="fa fa-envelope"></i> Solicitar Cotización
+                        </a>
+                        <a href="tel:+525648401749" style="background: white; color: var(--ap-verde-corporativo); border: 2px solid var(--ap-verde-corporativo); padding: 15px 30px; border-radius: 8px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-weight: 600; transition: all 0.3s;">
+                            <i class="fa fa-phone"></i> Llamar Ahora
                         </a>
                     </div>
                 </div>
@@ -336,5 +304,6 @@ window.APSafetyProducts = {
     loadAllProductsFromJSON,
     processProductData,
     groupProductsByCategory,
-    renderProductHTML
+    renderProductHTML,
+    categoryMapping
 };
