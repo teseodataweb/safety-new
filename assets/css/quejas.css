@@ -1,0 +1,75 @@
+/* ===== ESTILOS PARA LA PÁGINA DE QUEJAS ===== */
+
+.quejas-section {
+  padding: 120px 0;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.titulo-quejas {
+  color: #2ab97e;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.quejas-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.quejas-imagen {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quejas-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-verde, .btn-amarillo {
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.btn-verde {
+  background-color: #2ab97e;
+}
+
+.btn-verde:hover {
+  background-color: #23996a;
+}
+
+.btn-amarillo {
+  background-color: #f5c518;
+}
+
+.btn-amarillo:hover {
+  background-color: #d4aa0f;
+}
+
+@media (max-width: 768px) {
+  .quejas-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quejas-botones {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
