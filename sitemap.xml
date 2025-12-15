@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Página Principal -->
+    <url>
+        <loc>https://www.apmascarillas.com.mx/</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Páginas Institucionales -->
+    <url>
+        <loc>https://www.apmascarillas.com.mx/about.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/contact.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/services.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/team.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/testimonials.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/faq.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/quejas.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Catálogo de Productos -->
+    <url>
+        <loc>https://www.apmascarillas.com.mx/products.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/products-catalog.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/product-details.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/projects.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Páginas por Industria -->
+    <url>
+        <loc>https://www.apmascarillas.com.mx/industria-construccion.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/industria-mineria.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/industria-quimica.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/industria-alimentos.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/industria-metalmecanica.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Blog y Contenido -->
+    <url>
+        <loc>https://www.apmascarillas.com.mx/blog.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/blog-details.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/videos.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://www.apmascarillas.com.mx/informacion-tecnica.html</loc>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+</urlset>

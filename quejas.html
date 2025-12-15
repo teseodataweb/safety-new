@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 
-<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Sep 2025 17:30:13 GMT -->
 <head>
     <meta charset="UTF-8" />
+    <link rel="canonical" href="https://www.apmascarillas.com.mx/quejas.html" />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto - AP Safety | México, USA, Colombia</title>
     <!-- favicons Icons -->
@@ -64,6 +65,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/ap-safety-custom.css" />
 
     <style>
     .result p {
@@ -72,6 +74,43 @@
   transition: all 0.3s ease;
 }
 </style>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.apmascarillas.com.mx/quejas.html" />
+    <meta property="og:title" content="Sistema de Quejas - AP Safety | Atención al Cliente" />
+    <meta property="og:description" content="Sistema de atención a quejas y sugerencias de AP Safety. Comprometidos con la mejora continua." />
+    <meta property="og:image" content="https://www.apmascarillas.com.mx/assets/images/og/og-default.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="AP Safety" />
+    <meta property="og:locale" content="es_MX" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sistema de Quejas - AP Safety | Atención al Cliente" />
+    <meta name="twitter:description" content="Sistema de atención a quejas y sugerencias de AP Safety. Comprometidos con la mejora continua." />
+    <meta name="twitter:image" content="https://www.apmascarillas.com.mx/assets/images/og/og-default.jpg" />
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+                {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Inicio",
+                        "item": "https://www.apmascarillas.com.mx/"
+                },
+                {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Quejas",
+                        "item": "https://www.apmascarillas.com.mx/quejas.html"
+                }
+        ]
+}
+    </script>
 </head>
 
 <body class="custom-cursor">
@@ -98,20 +137,20 @@
         <div class="popup-inner">
             <div class="close-chat"><i class="fa fa-times"></i></div>
             <div class="chat-form">
-                <p>Please fill out the form below and we will get back to you as soon as possible.</p>
-                <form action="https://weblayout.mnsithub.com/html/fixpro/main-html/assets/inc/sendemail.php" method="POST" class="contact-form-validated">
+                <p>Completa el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                <form action="formulario.php" method="POST" class="contact-form-validated">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Tu nombre" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Tu correo" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Text"></textarea>
+                        <textarea name="message" placeholder="Tu mensaje"></textarea>
                     </div>
                     <div class="form-group message-btn">
                         <button type="submit" class="thm-btn">
-                            Submit Now
+                            Enviar
                             <span class="icon-arrow-right"></span>
                         </button>
                     </div>
@@ -134,33 +173,33 @@
                     <div class="sidebar-info-contents">
                         <div class="content-inner">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-2.png" alt="" /></a>
+                                <a href="index.html"><img src="assets/images/resources/logo-2.png" alt="Logo AP Safety" /></a>
                             </div>
                             <div class="content-box">
-                                <h4>About Us</h4>
+                                <h4>Nosotros</h4>
                                 <div class="inner-text">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                        roots in a piece of classical Latin literature from 45 BC, making it over
-                                        2000 years old.
+                                    <p>AP Safety es fabricante líder de Equipos de Protección Personal en México
+                                        y Latinoamérica. Con más de 25 años de experiencia, ofrecemos productos
+                                        certificados bajo normas NOM, ANSI e ISO.
                                     </p>
                                 </div>
                             </div>
 
                             <div class="form-inner">
-                                <h4>Get a free quote</h4>
-                                <form action="https://weblayout.mnsithub.com/html/fixpro/main-html/assets/inc/sendemail.php" method="POST" class="contact-form-validated">
+                                <h4>Solicitar Cotización</h4>
+                                <form action="formulario.php" method="POST" class="contact-form-validated">
                                     <div class="form-group">
-                                        <input type="text" name="name" placeholder="Name" required="">
+                                        <input type="text" name="name" placeholder="Nombre" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="email" placeholder="Email" required="">
+                                        <input type="email" name="email" placeholder="Correo" required="">
                                     </div>
                                     <div class="form-group">
-                                        <textarea name="message" placeholder="Message..." required></textarea>
+                                        <textarea name="message" placeholder="Mensaje..." required></textarea>
                                     </div>
                                     <div class="form-group message-btn">
-                                        <button class="thm-btn" type="submit" data-loading-text="Please wait...">
-                                            Submit Now <span class="icon-arrow-right"></span>
+                                        <button class="thm-btn" type="submit" data-loading-text="Enviando...">
+                                            Enviar <span class="icon-arrow-right"></span>
                                         </button>
                                     </div>
                                     <div class="result"></div>
@@ -220,7 +259,7 @@
                                 <i class="icon-call"></i>
                             </div>
                             <div class="text">
-                                <p><a href="tel:+5217911101246">+5217911101246</a></p>
+                                <p><a href="tel:+52 (56) 4840-1749">+52 (56) 4840-1749</a></p>
                             </div>
                         </li>
                         <li>
@@ -247,7 +286,7 @@
                             <div class="main-menu__top-time-icon">
                                 <span class="icon-clock"></span>
                             </div>
-                            <p class="main-menu__top-text">Lun - Vie: 09:00 - 18:00</p>
+                            <p class="main-menu__top-text">Lun - Vie: 08:00 - 18:00</p>
                         </div>
                         <div class="main-menu__social">
                             <a href="https://www.linkedin.com/company/ap-safety/"><i class="fab fa-linkedin"></i></a>
@@ -263,7 +302,7 @@
                     <div class="main-menu__wrapper-inner">
                         <div class="main-menu__left">
                             <div class="main-menu__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt=""></a>
+                                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="Logo AP Safety - Equipos de Protección Personal"></a>
                             </div>
                         </div>
                         <div class="main-menu__main-menu-box">
@@ -365,7 +404,7 @@
         <div class="container text-center">
             <h1 class="titulo-quejas">Quejas y Sugerencias</h1>
             <div class="quejas-contenido">
-                <img src="assets/images/quejas.jpg" alt="Imagen Quejas" class="quejas-imagen">
+                <img src="assets/images/quejas.jpg" alt="Imagen Quejas" class="quejas-imagen" loading="lazy">
                 <div class="quejas-botones">
                     <a href="https://forms.gle/krEsENgeBRVZkPXo8" class="btn-verde">Sucursal Tlanepantla</a>
                     <a href="https://forms.gle/9GPgy67ZPmn15Piu9" class="btn-amarillo">Sucursal Sahagún</a>
@@ -377,10 +416,10 @@
         <!--Contact Page End-->
 
         <!--Site Footer Start-->
-        <footer class="site-footer">
+        <footer class="site-footer" itemscope itemtype="https://schema.org/LocalBusiness">
             <div class="site-footer__bg-color">
                 <div class="footer-widget__shape-1">
-                    <img src="assets/images/shapes/footer-widget-shape-1.png" alt="">
+                    <img src="assets/images/shapes/footer-widget-shape-1.png" alt="" loading="lazy">
                 </div>
             </div>
             <div class="container">
@@ -389,7 +428,7 @@
                         <div class="col-xl-3 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget__about">
                                 <div class="footer-widget__logo">
-                                    <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/images/resources/footer-logo.png" alt="AP Safety - Equipos de Protección Personal" loading="lazy"></a>
                                 </div>
                                 <p class="footer-widget__about-text">AP Safety es fabricante líder de Equipos de Protección Personal certificados en México y LATAM. Contamos con laboratorio acreditado EMA y certificaciones NOM, ANSI, ISO.</p>
                                 <div class="footer-widget__working-box">
@@ -469,7 +508,7 @@
                                                             <span class="icon-phone-call"></span>
                                                         </div>
                                                         <div class="content">
-                                                            <p><a href="tel:+5217911101246">México: +52 1 791 110 1246</a></p>
+                                                            <p><a href="tel:+52 (56) 4840-1749">México: +52 1 791 110 1246</a></p>
                                                         </div>
                                                     </li>
                                                     <li>
@@ -532,7 +571,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
             <div class="logo-box">
                 <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="140"
-                        alt="" /></a>
+                        alt="Logo AP Safety" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -541,11 +580,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@Fixpro</a>
+                    <a href="mailto:ventas@apmascarillas.com.mx">ventas@apmascarillas.com.mx</a>
                 </li>
                 <li>
                     <i class="fas fa-phone"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:+52 (56) 4840-1749">+52 (56) 4840-1749</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
@@ -564,24 +603,24 @@
 
 
 
-    <!-- Search Popup -->
+    <!-- Buscar Popup -->
     <div class="search-popup">
         <div class="color-layer"></div>
         <button class="close-search"><span class="far fa-times fa-fw"></span></button>
-        <form method="post" action="https://weblayout.mnsithub.com/html/fixpro/main-html/blog.html">
+        <form method="post" action="blog.html">
             <div class="form-group">
-                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <input type="search" name="search-field" value="" placeholder="Buscar..." required="">
                 <button type="submit"><i class="fas fa-search"></i></button>
             </div>
         </form>
     </div>
-    <!-- End Search Popup -->
+    <!-- End Buscar Popup -->
 
 
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
-        <span class="scroll-to-top__text"> Go Back Top</span>
+        <span class="scroll-to-top__text"> Volver arriba</span>
     </a>
 
 
@@ -622,5 +661,4 @@
 </body>
 
 
-<!-- Mirrored from weblayout.mnsithub.com/html/fixpro/main-html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Sep 2025 17:30:13 GMT -->
 </html>

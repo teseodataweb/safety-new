@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Administrativo - AP Safety</title>
+    <title>Login Administradoristrativo - AP Safety</title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
@@ -191,8 +192,8 @@
     <div class="login-container">
         <div class="login-card">
             <div class="login-header">
-                <img src="assets/images/resources/footer-logo.png" alt="AP Safety" onerror="this.style.display='none'">
-                <h2><i class="fa fa-shield-alt"></i> Acceso Administrativo</h2>
+                <img src="assets/images/resources/footer-logo.png" alt="AP Safety" onerror="this.style.display='none'" loading="lazy">
+                <h2><i class="fa fa-shield-alt"></i> Acceso Administradoristrativo</h2>
             </div>
 
             <div class="login-body">
@@ -264,14 +265,14 @@
             const loginCard = document.querySelector('.login-card');
 
             // Limpiar mensajes anteriores
-            alertDiv.className = 'alert-message';
+            alertDiv.classNombre = 'alert-message';
             alertDiv.innerHTML = '';
 
             // Intentar login con el sistema simplificado
             const result = window.SimpleAuth.login(username, password);
 
             if (result.success) {
-                alertDiv.className = 'alert-message success';
+                alertDiv.classNombre = 'alert-message success';
                 alertDiv.innerHTML = `
                     <i class="fa fa-check-circle"></i> ${result.message}
                     <br><small>Redirigiendo al panel de administración...</small>
@@ -282,7 +283,7 @@
                     window.location.href = 'admin-products.html';
                 }, 1000);
             } else {
-                alertDiv.className = 'alert-message error';
+                alertDiv.classNombre = 'alert-message error';
                 alertDiv.innerHTML = `
                     <i class="fa fa-exclamation-circle"></i> ${result.message}
                 `;
@@ -298,16 +299,16 @@
         // Mostrar/ocultar contraseña
         document.getElementById('password').addEventListener('focus', function() {
             const icon = document.createElement('i');
-            icon.className = 'fa fa-eye';
+            icon.classNombre = 'fa fa-eye';
             icon.style.cursor = 'pointer';
             icon.onclick = function() {
                 const passwordField = document.getElementById('password');
                 if (passwordField.type === 'password') {
                     passwordField.type = 'text';
-                    icon.className = 'fa fa-eye-slash';
+                    icon.classNombre = 'fa fa-eye-slash';
                 } else {
                     passwordField.type = 'password';
-                    icon.className = 'fa fa-eye';
+                    icon.classNombre = 'fa fa-eye';
                 }
             };
 

@@ -1,0 +1,60 @@
+# robots.txt para AP Safety
+# https://www.apmascarillas.com.mx
+# Actualizado: 14 de Diciembre 2025
+
+# Configuración para todos los robots
+User-agent: *
+Allow: /
+
+# Páginas restringidas (no indexar)
+Disallow: /admin-products.html
+Disallow: /login.html
+Disallow: /backup_sprint4/
+Disallow: /includes/
+Disallow: /*.json$
+Disallow: /scripts/
+
+# Archivos de configuración
+Disallow: /*.py$
+Disallow: /*.md$
+Disallow: /*.log$
+
+# Recursos estáticos permitidos
+Allow: /assets/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Sitemap
+Sitemap: https://www.apmascarillas.com.mx/sitemap.xml
+
+# Configuración específica para Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /admin-products.html
+Disallow: /login.html
+Disallow: /backup_sprint4/
+
+# Configuración específica para Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Configuración específica para Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin-products.html
+Disallow: /login.html
+Disallow: /backup_sprint4/
+
+# Bloquear bots de scraping conocidos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Host preferido
+Host: https://www.apmascarillas.com.mx

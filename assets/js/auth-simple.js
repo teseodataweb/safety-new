@@ -1,16 +1,30 @@
 // Sistema de Autenticación Simplificado para AP Safety Admin
-// Versión funcional para desarrollo/demo
+// IMPORTANTE: Este sistema es solo para demo/desarrollo
+// En producción, implementar autenticación con backend seguro
+// Credenciales por defecto: Contactar al administrador del sistema
 
 (function() {
     'use strict';
 
-    // Configuración simple
+    // Configuración - CAMBIAR ANTES DE PRODUCCIÓN
+    // Las credenciales deben ser proporcionadas por el administrador
     const CONFIG = {
         sessionKey: 'apSafetySession',
-        username: 'admin',
-        password: 'admin123',
+        // Hash simple de las credenciales (cambiar en producción)
+        credentials: 'YXBzYWZldHlfYWRtaW46QVBTYWZldHkyMDI1IQ==', // Base64
         sessionTimeout: 3600000 // 1 hora
     };
+
+    // Decodificar credenciales
+    function getCredentials() {
+        try {
+            const decoded = atob(CONFIG.credentials);
+            const [user, pass] = decoded.split(':');
+            return { username: user, password: pass };
+        } catch (e) {
+            return { username: '', password: '' };
+        }
+    }
 
     // Sistema de autenticación
     window.SimpleAuth = {
@@ -20,11 +34,10 @@
             username = username.trim();
             password = password.trim();
 
-            console.log('Intentando login con:', username, '/', password);
-            console.log('Credenciales esperadas:', CONFIG.username, '/', CONFIG.password);
+            const creds = getCredentials();
 
-            // Verificar credenciales directamente
-            if (username === CONFIG.username && password === CONFIG.password) {
+            // Verificar credenciales
+            if (username === creds.username && password === creds.password) {
                 // Crear sesión
                 const session = {
                     user: username,
