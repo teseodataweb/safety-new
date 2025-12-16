@@ -22,6 +22,30 @@ const categoryMapping = {
     'Otros': 'accesorios'
 };
 
+// Mapeo de categorías a iconos Font Awesome
+const categoryIcons = {
+    'equipos-scba': 'fa-lungs',
+    'respiradores-n95': 'fa-head-side-mask',
+    'respiradores-reutilizables': 'fa-mask',
+    'mascarillas': 'fa-head-side-mask',
+    'mascarillas-infantiles': 'fa-child',
+    'cubrebocas': 'fa-head-side-mask',
+    'guantes': 'fa-mitten',
+    'ropa-proteccion': 'fa-tshirt',
+    'calzado': 'fa-shoe-prints',
+    'cabeza': 'fa-hard-hat',
+    'proteccion-visual': 'fa-glasses',
+    'proteccion-auditiva': 'fa-deaf',
+    'fajas': 'fa-band-aid',
+    'senalizacion': 'fa-exclamation-triangle',
+    'accesorios': 'fa-cogs'
+};
+
+// Función para obtener icono por categoría
+function getCategoryIcon(category) {
+    return categoryIcons[category] || 'fa-box';
+}
+
 // Función para cargar productos desde el archivo JSON
 async function loadAllProductsFromJSON() {
     try {
@@ -103,6 +127,9 @@ function renderProductHTML(product) {
         ? '<span class="badge" style="background: #014C3F; color: white; padding: 3px 8px; border-radius: 12px; font-size: 10px;">Marca AP</span>'
         : '<span class="badge" style="background: #666; color: white; padding: 3px 8px; border-radius: 12px; font-size: 10px;">Distribuido</span>';
 
+    // Obtener el icono de la categoría
+    const categoryIcon = getCategoryIcon(product.category);
+
     return `
         <div class="col-xl-4 col-lg-6 col-md-6 product-item"
              data-category="${product.category}"
@@ -110,15 +137,10 @@ function renderProductHTML(product) {
              data-certifications="${product.certification.join(' ')}"
              data-type="${product.type}">
             <div class="single-product-style1">
-                <div class="single-product-style1__img">
-                    <img src="${product.image}"
-                         alt="${product.name}"
-                         onerror="this.src='assets/images/shop/shop-product-1-1.jpg'">
-                    <img src="${product.image}"
-                         alt="${product.name}"
-                         onerror="this.src='assets/images/shop/shop-product-1-1.jpg'">
+                <div class="single-product-style1__img product-icon-container" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center; min-height: 200px; position: relative;">
+                    <i class="fas ${categoryIcon}" style="font-size: 80px; color: var(--ap-verde-corporativo); opacity: 0.8;"></i>
                     ${product.certification.length > 0 ? `
-                        <ul class="single-product-style1__overlay">
+                        <ul class="single-product-style1__overlay" style="position: absolute; top: 10px; left: 10px;">
                             <li><p>${product.certification[0]}</p></li>
                         </ul>
                     ` : ''}
@@ -305,5 +327,7 @@ window.APSafetyProducts = {
     processProductData,
     groupProductsByCategory,
     renderProductHTML,
-    categoryMapping
+    categoryMapping,
+    categoryIcons,
+    getCategoryIcon
 };
