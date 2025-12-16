@@ -855,18 +855,10 @@
                 setupEventListeners();
 
                 // Soporte para hash routing (filtrar por categoría desde URL)
-                if (window.location.hash) {
-                    const hashCategory = window.location.hash.substring(1);
-                    const categoryTab = document.querySelector(`.category-tab[data-category="${hashCategory}"]`);
-                    if (categoryTab) {
-                        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
-                        categoryTab.classList.add('active');
-                        currentCategory = hashCategory;
-                        filterProducts();
-                        // Scroll a la sección de productos
-                        document.querySelector('.category-filter-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
+                handleHashChange();
+
+                // Escuchar cambios de hash para filtrar cuando el usuario navega
+                window.addEventListener('hashchange', handleHashChange);
 
                 console.log(`Cargados ${window.allProducts.length} productos exitosamente`);
             } catch (error) {
@@ -880,6 +872,33 @@
                 `;
             }
         });
+
+        // Función para manejar cambios de hash en la URL
+        function handleHashChange() {
+            if (window.location.hash) {
+                const hashCategory = window.location.hash.substring(1);
+                const categoryTab = document.querySelector(`.category-tab[data-category="${hashCategory}"]`);
+                if (categoryTab) {
+                    document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                    categoryTab.classList.add('active');
+                    currentCategory = hashCategory;
+                    currentPage = 1;
+                    filterProducts();
+                    // Scroll a la sección de productos
+                    setTimeout(() => {
+                        document.querySelector('.category-filter-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            } else {
+                // Si no hay hash, mostrar todos los productos
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                const allTab = document.querySelector('.category-tab[data-category="all"]');
+                if (allTab) allTab.classList.add('active');
+                currentCategory = 'all';
+                currentPage = 1;
+                filterProducts();
+            }
+        }
 
         // Configurar event listeners
         function setupEventListeners() {
