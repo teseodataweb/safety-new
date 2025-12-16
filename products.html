@@ -818,6 +818,20 @@
                 // Configurar event listeners
                 setupEventListeners();
 
+                // Soporte para hash routing (filtrar por categoría desde URL)
+                if (window.location.hash) {
+                    const hashCategory = window.location.hash.substring(1);
+                    const categoryTab = document.querySelector(`.category-tab[data-category="${hashCategory}"]`);
+                    if (categoryTab) {
+                        document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));
+                        categoryTab.classList.add('active');
+                        currentCategory = hashCategory;
+                        filterProducts();
+                        // Scroll a la sección de productos
+                        document.querySelector('.category-filter-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
+
                 console.log(`Cargados ${window.allProducts.length} productos exitosamente`);
             } catch (error) {
                 console.error('Error cargando productos:', error);
