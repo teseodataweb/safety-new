@@ -156,7 +156,7 @@
       loop: true,
       margin: 30,
       nav: true,
-      dots: false,
+      dots: true,
       smartSpeed: 500,
       autoplay: true,
       autoplayTimeout: 7000,
@@ -623,23 +623,83 @@
 
 
 
+  // Mensajes de validación en español
+  $.extend($.validator.messages, {
+    required: "Este campo es requerido",
+    email: "Por favor ingresa un correo válido",
+    minlength: $.validator.format("Por favor ingresa al menos {0} caracteres"),
+    maxlength: $.validator.format("Por favor ingresa no más de {0} caracteres"),
+    phone: "Por favor ingresa un teléfono válido"
+  });
+
   $(".contact-form-validated").each(function () {
     $(this).validate({
       rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
         email: {
           required: true,
           email: true
+        },
+        phone: {
+          required: true,
+          minlength: 8
+        },
+        message: {
+          required: true,
+          minlength: 10
         }
       },
+      messages: {
+        name: {
+          required: "Por favor ingresa tu nombre",
+          minlength: "Tu nombre debe tener al menos 2 caracteres"
+        },
+        email: {
+          required: "Por favor ingresa tu correo",
+          email: "Por favor ingresa un correo válido"
+        },
+        phone: {
+          required: "Por favor ingresa tu teléfono",
+          minlength: "El teléfono debe tener al menos 8 dígitos"
+        },
+        message: {
+          required: "Por favor escribe tu mensaje",
+          minlength: "El mensaje debe tener al menos 10 caracteres"
+        }
+      },
+      errorPlacement: function(error, element) {
+        error.addClass('text-danger');
+        error.css({'font-size': '12px', 'margin-top': '5px'});
+        error.insertAfter(element);
+      },
       submitHandler: function (form) {
-        $.post(
-          $(form).attr("action"),
-          $(form).serialize(),
-          function (response) {
-            $(form).find(".result").html(response);
-            $(form).find('input[type="text"], input[type="email"], textarea').val("");
+        var $form = $(form);
+        var $btn = $form.find('button[type="submit"]');
+        var $result = $form.find(".result");
+        var originalText = $btn.html();
+
+        // Mostrar estado de carga
+        $btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Enviando...');
+
+        $.ajax({
+          url: $form.attr("action"),
+          type: "POST",
+          data: $form.serialize(),
+          success: function(response) {
+            $result.html('<div class="alert alert-success" style="background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-top: 20px;"><i class="fa fa-check-circle"></i> ¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.</div>');
+            $form.find('input[type="text"], input[type="email"], textarea').val("");
+          },
+          error: function() {
+            $result.html('<div class="alert alert-warning" style="background: #fff3cd; color: #856404; padding: 15px; border-radius: 5px; margin-top: 20px;"><i class="fa fa-info-circle"></i> Gracias por tu mensaje. Por favor contáctanos directamente al <a href="tel:+525648401749">+52 (56) 4840-1749</a> o envía un correo a <a href="mailto:ventas@apmascarillas.com.mx">ventas@apmascarillas.com.mx</a></div>');
+            $form.find('input[type="text"], input[type="email"], textarea').val("");
+          },
+          complete: function() {
+            $btn.prop('disabled', false).html(originalText);
           }
-        );
+        });
         return false;
       }
     });
