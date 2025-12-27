@@ -22,23 +22,23 @@ const categoryMapping = {
     'Otros': 'accesorios'
 };
 
-// Mapeo de categorías a iconos Font Awesome
+// Mapeo de categorías a iconos Font Awesome (FA5 Free compatible)
 const categoryIcons = {
-    'equipos-scba': 'fa-lungs',
-    'respiradores-n95': 'fa-head-side-mask',
-    'respiradores-reutilizables': 'fa-mask',
-    'mascarillas': 'fa-head-side-mask',
-    'mascarillas-infantiles': 'fa-child',
-    'cubrebocas': 'fa-head-side-mask',
-    'guantes': 'fa-mitten',
-    'ropa-proteccion': 'fa-tshirt',
-    'calzado': 'fa-shoe-prints',
-    'cabeza': 'fa-hard-hat',
-    'proteccion-visual': 'fa-glasses',
-    'proteccion-auditiva': 'fa-deaf',
-    'fajas': 'fa-band-aid',
-    'senalizacion': 'fa-exclamation-triangle',
-    'accesorios': 'fa-cogs'
+    'equipos-scba': 'fa-lungs',                    // Equipos de respiración autónoma
+    'respiradores-n95': 'fa-mask',                 // Respiradores desechables N95/P95
+    'respiradores-reutilizables': 'fa-mask',       // Respiradores reutilizables
+    'mascarillas': 'fa-shield-alt',                // Mascarillas desechables
+    'mascarillas-infantiles': 'fa-child',          // Mascarillas infantiles
+    'cubrebocas': 'fa-mask',                       // Cubrebocas desechables
+    'guantes': 'fa-mitten',                        // Guantes de protección
+    'ropa-proteccion': 'fa-tshirt',                // Ropa de protección
+    'calzado': 'fa-shoe-prints',                   // Calzado de seguridad
+    'cabeza': 'fa-hard-hat',                       // Accesorios para cabeza
+    'proteccion-visual': 'fa-glasses',             // Protección visual
+    'proteccion-auditiva': 'fa-deaf',              // Protección auditiva
+    'fajas': 'fa-band-aid',                        // Fajas y soporte lumbar
+    'senalizacion': 'fa-exclamation-triangle',     // Señalización
+    'accesorios': 'fa-cogs'                        // Accesorios y refacciones
 };
 
 // Función para obtener icono por categoría
