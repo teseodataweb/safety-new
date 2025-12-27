@@ -577,3 +577,682 @@ button[style*="background: #f36f21"]:hover,
 .thm-btn[style*="background: #f36f21"]:hover {
     background: var(--ap-verde-oscuro) !important;
 }
+
+/* ========================================
+   CORRECCIONES DE CONTRASTE - MENÚ MÓVIL
+   Issues DH.6, D1.1, D1.3
+   ======================================== */
+
+/* Fondo del menú móvil - oscurecido para mejor contraste */
+.mobile-nav__content {
+    background-color: #0a0a0a !important;
+}
+
+/* Logo visible en menú móvil */
+.mobile-nav__content .logo-box {
+    background-color: var(--ap-blanco) !important;
+    padding: 15px 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 20px !important;
+    display: inline-block !important;
+}
+
+.mobile-nav__content .logo-box img {
+    max-height: 50px !important;
+    width: auto !important;
+    filter: none !important;
+}
+
+/* Texto de navegación móvil - alto contraste */
+.mobile-nav__container ul li a {
+    color: var(--ap-blanco) !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.mobile-nav__container ul li a:hover,
+.mobile-nav__container ul li.current a {
+    color: var(--ap-verde-corporativo) !important;
+    background-color: rgba(1, 90, 74, 0.15) !important;
+}
+
+/* Submenús móviles */
+.mobile-nav__container ul li ul li a {
+    color: #cccccc !important;
+    font-size: 14px !important;
+    padding-left: 20px !important;
+}
+
+.mobile-nav__container ul li ul li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* Contacto en menú móvil */
+.mobile-nav__contact li {
+    color: var(--ap-blanco) !important;
+    font-size: 14px !important;
+    margin-bottom: 10px !important;
+}
+
+.mobile-nav__contact li a {
+    color: var(--ap-blanco) !important;
+}
+
+.mobile-nav__contact li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.mobile-nav__contact li i {
+    color: var(--ap-verde-corporativo) !important;
+    margin-right: 10px !important;
+}
+
+/* Redes sociales en menú móvil */
+.mobile-nav__social a {
+    color: var(--ap-blanco) !important;
+    font-size: 20px !important;
+    margin-right: 15px !important;
+    transition: color 0.3s ease !important;
+}
+
+.mobile-nav__social a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* Botón cerrar menú móvil */
+.mobile-nav__close {
+    color: var(--ap-blanco) !important;
+    font-size: 24px !important;
+}
+
+.mobile-nav__close:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* Dropdown arrows en móvil */
+.mobile-nav__container .dropdown-btn {
+    color: var(--ap-blanco) !important;
+}
+
+/* Botón hamburguesa - visible */
+.mobile-nav__toggler {
+    color: var(--ap-negro-principal) !important;
+}
+
+.mobile-nav__toggler i {
+    color: var(--ap-verde-corporativo) !important;
+    font-size: 24px !important;
+}
+
+/* ========================================
+   CORRECCIONES SECCIÓN TESTIMONIOS
+   Issue D1.1 - Contraste "¿Qué dicen nuestros clientes?"
+   ======================================== */
+
+.testimonial-one .section-title__tagline,
+.testimonial-one .section-title__title {
+    color: var(--ap-blanco) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.testimonial-one__single {
+    background-color: var(--ap-blanco) !important;
+}
+
+.testimonial-one__text {
+    color: #333333 !important;
+}
+
+.testimonial-one__client-name {
+    color: var(--ap-negro-principal) !important;
+}
+
+.testimonial-one__client-sub-title {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* ========================================
+   CORRECCIONES SECCIÓN PROCESO
+   Issue D1.1 - Contraste "Conoce nuestro proceso"
+   ======================================== */
+
+.video-one .section-title__tagline,
+.video-one .section-title__title {
+    color: var(--ap-blanco) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.video-one__text,
+.video-one p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ========================================
+   SIDEBAR WIDGET - Contraste
+   ======================================== */
+
+.xs-sidebar-widget {
+    background-color: #0a0a0a !important;
+}
+
+.sidebar-info-contents {
+    color: var(--ap-blanco) !important;
+}
+
+.sidebar-info-contents .content-box h4,
+.sidebar-contact-info h4 {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.sidebar-info-contents .inner-text p,
+.sidebar-contact-info ul li {
+    color: #cccccc !important;
+}
+
+.sidebar-contact-info ul li a {
+    color: #cccccc !important;
+}
+
+.sidebar-contact-info ul li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.thm-social-link1 .social-box li a {
+    color: var(--ap-blanco) !important;
+    background-color: rgba(1, 90, 74, 0.3) !important;
+    border: 1px solid var(--ap-verde-corporativo) !important;
+}
+
+.thm-social-link1 .social-box li a:hover {
+    background-color: var(--ap-verde-corporativo) !important;
+    color: var(--ap-blanco) !important;
+}
+
+/* ========================================
+   CORRECCIÓN LOGOS CERTIFICACIONES
+   Issue D1.8 - Logos descentrados
+   ======================================== */
+
+/* Sección de certificaciones - team-one */
+.team-one__single {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    height: 100% !important;
+    padding: 30px 20px !important;
+}
+
+.team-one__img {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 120px !important;
+    overflow: hidden !important;
+    margin-bottom: 20px !important;
+}
+
+.team-one__img img {
+    max-width: 100% !important;
+    max-height: 100px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+}
+
+.team-one__content {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.team-one__name {
+    text-align: center !important;
+    margin-bottom: 5px !important;
+}
+
+.team-one__sub-title {
+    text-align: center !important;
+    color: var(--ap-gris-medio) !important;
+}
+
+/* Grid de certificaciones responsivo */
+.team-one .row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+
+.team-one [class*="col-"] {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 30px !important;
+}
+
+/* Hover effect para certificaciones */
+.team-one__single:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.team-one__single:hover .team-one__img img {
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* ========================================
+   ICONOS FEATURE CARDS - Font Awesome
+   Issue D1.7 - Iconos más representativos
+   ======================================== */
+
+.feature-one__icon i.fas,
+.feature-one__icon i.fab,
+.feature-one__icon i.far {
+    font-size: 55px !important;
+    color: var(--ap-verde-corporativo) !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+}
+
+.feature-one__single:hover .feature-one__icon i {
+    color: var(--ap-verde-oscuro) !important;
+    transform: scale(1.1) !important;
+}
+
+/* ========================================
+   CORRECCIÓN ICONO EMAIL SIDEBAR
+   Issue D1.7 - Icono email "aplastado"
+   ======================================== */
+
+.sidebar-contact-info ul li {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 15px !important;
+}
+
+.sidebar-contact-info ul li span[class^="icon-"] {
+    font-size: 20px !important;
+    width: 24px !important;
+    height: 24px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin-right: 12px !important;
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.sidebar-contact-info ul li .icon-envelope {
+    font-size: 18px !important;
+}
+
+/* ========================================
+   MEJORA CALIDAD IMÁGENES RESPONSIVE
+   Issue D2.2 - Imágenes about pierden calidad
+   ======================================== */
+
+.about-one__img img,
+.about-one__img-2 img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+@media (max-width: 991px) {
+    .about-one__img,
+    .about-one__img-2 {
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .about-one__img img,
+    .about-one__img-2 img {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-one__img-box {
+        padding: 0 10px !important;
+    }
+
+    .about-one__img img,
+    .about-one__img-2 img {
+        border-radius: 10px !important;
+    }
+}
+
+/* =====================================================
+   FIX D1.1: Contraste de texto en cards de Proyectos
+   ===================================================== */
+.project-one__text,
+.project-one__sub-title {
+    color: #333 !important;
+}
+
+.project-one__title a {
+    color: #222 !important;
+}
+
+.project-one__title a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* =====================================================
+   FIX D1.3: Cards encimadas en carousels de categorías
+   ===================================================== */
+.services-one__carousel .owl-stage {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.services-one__carousel .item {
+    margin: 0 10px !important;
+    height: auto !important;
+}
+
+.services-one__single {
+    height: 100% !important;
+    margin-bottom: 0 !important;
+}
+
+.services-one__carousel .owl-item {
+    padding: 10px 0 !important;
+}
+
+/* Fix para categorías en páginas de industria */
+.services-one__carousel.owl-carousel .owl-stage-outer {
+    overflow: visible;
+    padding: 20px 0;
+}
+
+.services-one__carousel.owl-carousel {
+    padding: 0 15px;
+}
+
+/* =====================================================
+   FIX: Altura uniforme en cards de testimonios
+   ===================================================== */
+.testimonial-one__carousel .owl-stage {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.testimonial-one__carousel .owl-item {
+    display: flex !important;
+    height: auto !important;
+}
+
+.testimonial-one__carousel .item {
+    display: flex !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.testimonial-one__single {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    min-height: 320px;
+}
+
+.testimonial-one__text {
+    flex-grow: 1 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+}
+
+/* =====================================================
+   FIX: Espaciado entre filas de cards EPP en industrias
+   ===================================================== */
+.services-one .row > [class*="col-"] {
+    margin-bottom: 30px;
+}
+
+.services-one .row {
+    margin-bottom: -30px;
+}
+
+.services-one__single {
+    margin-bottom: 0 !important;
+    height: 100%;
+}
+
+/* =====================================================
+   FIX CH.9: Sticky header visible en todas las páginas
+   ===================================================== */
+.stricky-header {
+    z-index: 9999 !important;
+}
+
+.stricky-header.stricky-fixed {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* =====================================================
+   FIX DH.1: Logo visible en menú hamburguesa móvil
+   ===================================================== */
+.mobile-nav__content .logo-box {
+    background: #1a1a1a;
+    padding: 20px;
+    margin: -40px -40px 20px -40px;
+}
+
+.mobile-nav__content .logo-box img {
+    max-width: 160px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1);
+}
+
+.mobile-nav__container a {
+    color: #333 !important;
+}
+
+.mobile-nav__container .dropdown-btn {
+    color: #333 !important;
+}
+
+/* =====================================================
+   FIX DPC.3: Mejorar contraste nombre producto en cards
+   ===================================================== */
+.single-product-style1__title a {
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+.single-product-style1__title a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+/* =====================================================
+   FIX DPC.4: Corregir encimado en hover de product cards
+   ===================================================== */
+.product-item {
+    position: relative;
+    z-index: 1;
+    transition: z-index 0s 0.3s;
+}
+
+.product-item:hover {
+    z-index: 10;
+    transition: z-index 0s;
+}
+
+.single-product-style1 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.single-product-style1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   Iconos de acción en product cards
+   ===================================================== */
+.single-product-style1__info {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.single-product-style1__info li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.single-product-style1__info li a:hover {
+    background: var(--ap-verde-corporativo);
+    color: #fff;
+}
+
+.single-product-style1__info li a[title="Ficha Técnica"] {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.single-product-style1__info li a[title="Ficha Técnica"]:hover {
+    background: #1976d2;
+    color: #fff;
+}
+
+/* =====================================================
+   FIX DMN.2: Mejorar visibilidad menú móvil
+   ===================================================== */
+.mobile-nav__content {
+    background: #fff !important;
+}
+
+.mobile-nav__container .main-menu__list > li > a {
+    color: #1a1a1a !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #eee !important;
+}
+
+.mobile-nav__container .main-menu__list > li > a:hover {
+    color: var(--ap-verde-corporativo) !important;
+}
+
+.mobile-nav__container .main-menu__list .dropdown .dropdown-btn {
+    color: #1a1a1a !important;
+    background: transparent !important;
+}
+
+.mobile-nav__container .main-menu__list .dropdown ul li a {
+    color: #666 !important;
+    font-size: 14px !important;
+    padding: 10px 15px !important;
+}
+
+.mobile-nav__container .main-menu__list .dropdown ul li a:hover {
+    color: var(--ap-verde-corporativo) !important;
+    background: #f8f9fa !important;
+}
+
+/* Logo en menú móvil */
+.mobile-nav__content .logo-box {
+    background: var(--ap-verde-corporativo) !important;
+    padding: 25px 20px !important;
+    margin: -40px -40px 25px -40px !important;
+    text-align: center;
+}
+
+.mobile-nav__content .logo-box img {
+    max-width: 180px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Contacto en menú móvil */
+.mobile-nav__contact {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.mobile-nav__contact li {
+    color: #333 !important;
+    font-size: 14px !important;
+    padding: 8px 0 !important;
+}
+
+.mobile-nav__contact li a {
+    color: var(--ap-verde-corporativo) !important;
+    font-weight: 500 !important;
+}
+
+/* Redes sociales en menú móvil */
+.mobile-nav__social a {
+    width: 40px !important;
+    height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: var(--ap-verde-corporativo) !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    margin-right: 8px !important;
+    font-size: 16px !important;
+}
+
+.mobile-nav__social a:hover {
+    background: var(--ap-verde-oscuro) !important;
+}
+
+/* =====================================================
+   FIX: Correos cortados en sección Información de Contacto
+   ===================================================== */
+.video-one-contact__info-box {
+    overflow: visible !important;
+}
+
+.video-one-contact__info-list li .content {
+    overflow: visible !important;
+    width: auto !important;
+}
+
+.video-one-contact__info-list li .content p,
+.video-one-contact__info-list li .content a {
+    font-size: 13px !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+.video-one-contact__info-list li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+}
+
+.video-one-contact__info-list li .icon {
+    flex-shrink: 0 !important;
+}
