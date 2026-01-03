@@ -971,12 +971,31 @@ button[style*="background: #f36f21"]:hover,
 
 /* Fix para categorías en páginas de industria */
 .services-one__carousel.owl-carousel .owl-stage-outer {
-    overflow: visible;
+    overflow: hidden !important;
     padding: 20px 0;
 }
 
 .services-one__carousel.owl-carousel {
     padding: 0 15px;
+}
+
+/* =====================================================
+   FIX: Evitar superposición del carrusel con contenido izquierdo
+   ===================================================== */
+.services-one__right {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+}
+
+.services-one .row {
+    overflow: hidden !important;
+}
+
+.services-one__left {
+    position: relative !important;
+    z-index: 10 !important;
+    background: transparent !important;
 }
 
 /* =====================================================
@@ -1255,4 +1274,170 @@ button[style*="background: #f36f21"]:hover,
 
 .video-one-contact__info-list li .icon {
     flex-shrink: 0 !important;
+}
+
+/* =====================================================
+   FIX: Superposición de textos en sección Nuestros Productos
+   Corrección para evitar que títulos y textos se superpongan
+   ===================================================== */
+.services-one__left .section-title {
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: visible !important;
+    margin-top: 0 !important;
+}
+
+.services-one__left .section-title__tagline {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 0 15px 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
+}
+
+.services-one__left .section-title__title {
+    display: block !important;
+    font-size: 44px !important;
+    line-height: 52px !important;
+    margin: 0 !important;
+    position: relative !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+    letter-spacing: -1.44px !important;
+}
+
+/* Asegurar que los elementos de animación no causen superposición */
+.services-one__left .section-title__title .split-line {
+    display: block !important;
+    position: relative !important;
+    overflow: visible !important;
+    line-height: inherit !important;
+}
+
+.services-one__left .section-title__title br {
+    display: inline !important;
+}
+
+.services-one__text {
+    display: block !important;
+    margin-top: 20px !important;
+    line-height: 1.6 !important;
+    position: relative !important;
+    clear: both !important;
+}
+
+/* Asegurar que las animaciones GSAP no causen superposición */
+.services-one__left .title-animation {
+    position: relative !important;
+    display: block !important;
+}
+
+/* Responsive ajustes para tablet */
+@media only screen and (max-width: 991px) {
+    .services-one__left .section-title__title {
+        font-size: 36px !important;
+        line-height: 42px !important;
+    }
+
+    .services-one__left .section-title__tagline {
+        margin-bottom: 12px !important;
+    }
+
+    .services-one__text {
+        margin-top: 18px !important;
+    }
+}
+
+/* Responsive ajustes para móvil */
+@media only screen and (max-width: 767px) {
+    .services-one__left .section-title__title {
+        font-size: 26px !important;
+        line-height: 34px !important;
+    }
+
+    .services-one__left .section-title__title br {
+        display: none !important;
+    }
+
+    .services-one__left .section-title__tagline {
+        margin-bottom: 10px !important;
+        font-size: 14px !important;
+        line-height: 14px !important;
+    }
+
+    .services-one__text {
+        margin-top: 15px !important;
+        font-size: 15px !important;
+        line-height: 24px !important;
+    }
+}
+
+/* =====================================================
+   FIX: Carrusel de productos más ancho y responsivo
+   ===================================================== */
+
+/* Contenedor del carrusel */
+.services-one__carousel.owl-carousel .owl-stage-outer {
+    overflow: hidden !important;
+    padding: 15px 0 !important;
+}
+
+.services-one__carousel.owl-carousel .owl-stage {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Tarjetas con espaciado correcto */
+.services-one__carousel .owl-item {
+    padding: 5px !important;
+}
+
+.services-one__single {
+    height: 100% !important;
+    padding: 25px 20px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Responsive para tablets pequeñas - full width */
+@media only screen and (max-width: 991px) {
+    .services-one .col-lg-5,
+    .services-one .col-lg-7 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .services-one__left {
+        margin-bottom: 30px !important;
+        text-align: center !important;
+    }
+}
+
+/* Responsive para móviles */
+@media only screen and (max-width: 767px) {
+    .services-one__single {
+        padding: 20px 15px !important;
+    }
+
+    .services-one__title {
+        font-size: 18px !important;
+    }
+
+    .services-one__single-text {
+        font-size: 14px !important;
+    }
+}
+
+/* =====================================================
+   FIX: Iconos Font Awesome en carrusel de productos
+   ===================================================== */
+.services-one__icon i.fas,
+.services-one__icon i.far,
+.services-one__icon i.fab {
+    font-size: 55px !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+    display: inline-block !important;
 }
