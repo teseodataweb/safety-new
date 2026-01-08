@@ -1,5 +1,6 @@
 // Script para cargar TODOS los productos de AP Safety desde el JSON
 // Actualizado para 591 productos con nueva estructura
+// v2.0 - Soporte para imágenes reales del sitio actual
 
 // Mapeo de categorías del JSON a categorías de filtro
 const categoryMapping = {
@@ -46,10 +47,15 @@ function getCategoryIcon(category) {
     return categoryIcons[category] || 'fa-box';
 }
 
-// Función para cargar productos desde el archivo JSON
+// Función para cargar productos desde el archivo JSON (con imágenes asignadas)
 async function loadAllProductsFromJSON() {
     try {
-        const response = await fetch('productos_ap_safety.json');
+        // Intentar cargar el JSON con imágenes primero
+        let response = await fetch('productos_ap_safety_con_imagenes.json');
+        if (!response.ok) {
+            // Fallback al JSON original
+            response = await fetch('productos_ap_safety.json');
+        }
         const products = await response.json();
         return products;
     } catch (error) {
@@ -69,6 +75,10 @@ function processProductData(rawProduct) {
     // Procesar certificaciones (ya vienen como array en el nuevo JSON)
     const certifications = rawProduct.certificaciones || [];
 
+    // Determinar imagen: usar la asignada del JSON o null
+    const assignedImage = rawProduct.imagen ? `assets/images/products/${rawProduct.imagen}` : null;
+    const hasImage = assignedImage !== null;
+
     return {
         id: id,
         numericId: rawProduct.id,
@@ -84,7 +94,8 @@ function processProductData(rawProduct) {
         techSheet: rawProduct.ficha_tecnica,
         packagingUnit: rawProduct.envase_pza,
         packagingTotal: rawProduct.embalaje,
-        image: `assets/images/products/${id.toLowerCase()}.jpg`,
+        image: assignedImage,
+        hasImage: hasImage,
         // Campos de compatibilidad con estructura anterior
         protection: certifications.length > 0 ? certifications.join(', ') : 'Protección especializada',
         applications: rawProduct.descripcion,
@@ -130,6 +141,19 @@ function renderProductHTML(product) {
     // Obtener el icono de la categoría
     const categoryIcon = getCategoryIcon(product.category);
 
+    // Determinar contenido de imagen: imagen real o icono
+    let imageContent;
+    if (product.hasImage && product.image) {
+        imageContent = `
+            <img src="${product.image}"
+                 alt="${product.name}"
+                 style="width: 100%; height: 200px; object-fit: contain; padding: 10px;"
+                 onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\\'fas ${categoryIcon}\\' style=\\'font-size: 80px; color: var(--ap-verde-corporativo); opacity: 0.8;\\'></i>';">
+        `;
+    } else {
+        imageContent = `<i class="fas ${categoryIcon}" style="font-size: 80px; color: var(--ap-verde-corporativo); opacity: 0.8;"></i>`;
+    }
+
     return `
         <div class="col-xl-4 col-lg-6 col-md-6 product-item"
              data-category="${product.category}"
@@ -138,7 +162,7 @@ function renderProductHTML(product) {
              data-type="${product.type}">
             <div class="single-product-style1">
                 <div class="single-product-style1__img product-icon-container" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); display: flex; align-items: center; justify-content: center; min-height: 200px; position: relative;">
-                    <i class="fas ${categoryIcon}" style="font-size: 80px; color: var(--ap-verde-corporativo); opacity: 0.8;"></i>
+                    ${imageContent}
                     ${product.certification.length > 0 ? `
                         <ul class="single-product-style1__overlay" style="position: absolute; top: 10px; left: 10px;">
                             <li><p>${product.certification[0]}</p></li>
@@ -193,6 +217,22 @@ window.showProductDetail = function(productId) {
     const product = window.allProducts.find(p => p.id === productId);
     if (!product) return;
 
+    // Determinar contenido de imagen para el modal
+    const categoryIcon = getCategoryIcon(product.category);
+    let modalImageContent;
+    if (product.hasImage && product.image) {
+        modalImageContent = `
+            <div style="background: white; padding: 20px; text-align: center; border-radius: 10px; margin-bottom: 20px;">
+                <img src="${product.image}"
+                     alt="${product.name}"
+                     style="max-width: 100%; max-height: 250px; object-fit: contain;"
+                     onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\\'fas ${categoryIcon}\\' style=\\'font-size: 100px; color: var(--ap-verde-corporativo); opacity: 0.5;\\'></i>';">
+            </div>
+        `;
+    } else {
+        modalImageContent = '';
+    }
+
     // Crear modal con diseño mejorado
     const modalHTML = `
         <div class="product-modal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 99999; display: flex; align-items: center; justify-content: center; padding: 20px; animation: fadeIn 0.3s ease;">
@@ -207,6 +247,9 @@ window.showProductDetail = function(productId) {
 
                 <!-- Contenido -->
                 <div style="padding: 30px;">
+                    <!-- Imagen del producto -->
+                    ${modalImageContent}
+
                     <!-- Categoría y Planta -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
                         <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">

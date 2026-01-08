@@ -1,0 +1,327 @@
+ID,Clave,Nombre,Categoria,Tipo,Necesita_Foto
+1,"BRONDOAZCL","CUBREBOCA BRONDO  AZUL CLARO","Cubrebocas Desechables","Marca AP",SI
+2,"BRONDOAZPL","CUBREBOCA BRONDO AZUL PLUMBAGO","Cubrebocas Desechables","Marca AP",SI
+3,"BRONDOAZPLSC","CUBREBOCA BRONDO AZUL PLUMBAGO SIN CLIP","Cubrebocas Desechables","Marca AP",SI
+4,"BRONDOAZSC","CUBREBOCA BRONDO AZUL SIN CLIP","Cubrebocas Desechables","Marca AP",SI
+5,"BRONDOBL","CUBREBOCA BRONDO BLANCO","Cubrebocas Desechables","Marca AP",SI
+6,"BRONDOBLSC","CUBREBOCA BRONDO BLANCO SIN CLIP","Cubrebocas Desechables","Marca AP",SI
+7,"BRONDONE","CUBREBOCA BRONDO NEGRO","Cubrebocas Desechables","Marca AP",SI
+8,"BRONDONESC","CUBREBOCA BRONDO NEGRO SIN CLIP","Cubrebocas Desechables","Marca AP",SI
+9,"BRONDOROS","CUBREBOCA BRONDO ROSA","Cubrebocas Desechables","Marca AP",SI
+10,"BRONDOROSSC","CUBREBOCA BRONDO ROSA SIN CLIP","Cubrebocas Desechables","Marca AP",SI
+11,"BRONDOAZINF","CUBREBOCA BRONDO AZUL INFANTIL","Cubrebocas Desechables","Marca AP",SI
+12,"BRONDORSINF","CUBREBOCA BRONDO ROSA INFANTIL","Cubrebocas Desechables","Marca AP",SI
+13,"B4PA","BARBIQUEJO DE 4 PUNTOS","Accesorios para Cabeza","Marca AP",SI
+14,"BCMA","BARBIQUEJO CON MENTON AMBAR","Accesorios para Cabeza","Marca AP",SI
+15,"BSMA","BARBIQUEJO SIN MENTON AMBAR","Accesorios para Cabeza","Marca AP",SI
+17,"CABINT","CABEZAL CON AJUSTE DE INTERVALO","Accesorios para Cabeza","Marca AP",SI
+18,"CABMAT","CABEZAL CON AJUSTE DE MATRACA","Accesorios para Cabeza","Marca AP",SI
+19,"CARINR","CARETA INFANTIL ROSA","Accesorios para Cabeza","Marca AP",SI
+20,"CARINV","CARETA INFANTIL VERDE","Accesorios para Cabeza","Marca AP",SI
+21,"CARME","CARETA MEDICA ADULTO","Accesorios para Cabeza","Marca AP",SI
+22,"MEN","MENTONERA","Accesorios para Cabeza","Marca AP",SI
+52,"Y2023GRMAT","CASCO ALA ANCHA GRIS MATRACA","Accesorios para Cabeza","Marca AP",SI
+53,"RET","RETENEDOR PREFILTRO CARTUCHO","Respiradores Reutilizables","Marca AP",SI
+104,"FILT01","FILTRO DE AIRE PARA COMPRESOR IRON","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+105,"FILT02","FILTRO DE ACEITE PARA COMPRESION IRON","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+106,"IGAWG","MANOMETRO ANALOGO DE SCBA","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+107,"IGBACVPC","VALVULA PARA CILINDRO DE SCBA CON INDICADOR DE PRESIÓN","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+108,"IGBACVPG","VALVULA PARA CILINDRO DE SCBA CON AUTOLOCKPG","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+109,"IGBADVB","VALVULA PRESION-DEMANDA VPD","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+110,"IGBAPCNA","ESTUCHE DE SCBA NARANJA","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+111,"IGBAPCNE","ESTUCHE DE SCBA NEGRO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+112,"IGBASMB5","MASCARA DE CARA COMPLETA DE SCBA -5MOSK KEVLAR","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+113,"IGBASMCH5","MASCARA DE CARA COMPLETA DE SCBA CON LUCES HUD RADIO MOSK","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+114,"IGBP","BACKPLATE ESTÁNDAR SCBA","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+115,"IGBPAD","BACKPLATE AJUSTABLE BPAD  SCBA","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+116,"IGBPPL","PLATO PLASTICO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+117,"IGCFC3LV","CILINDRO ACERO 30 MIN","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+118,"IGCFC6LV","CILINDRO ACERO 60 MIN","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+119,"IGCHAS01AZMTL","CHAQUETON BOMBERO BRIGADISTA AZUL MARINO TL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+120,"IGCHAS01AZMTM","CHAQUETON BOMBERO BRIGADISTA AZUL MARINO TM","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+121,"IGCHAS01AZMTXL","CHAQUETON BOMBERO BRIGADISTA AZUL MARINO TXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+122,"IGCHAS01AZMTXXL","CHAQUETON BOMBERO BRIGADISTA AZUL MARINO TXXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+125,"IGCSLDRCA","TRAJE QUIMICO LIGERO CUERPO COMPLETO CARA ABIERTA SIN VISOR","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+127,"IGDETMONCH4","DETECTOR MONOGAS CH4","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+128,"IGDETMONCO","DETECTOR MONOGAS CO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+129,"IGDETMONCO2","DETECTOR MONOGAS CO2","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+130,"IGDETMONEX","DETECTOR MONOGAS EX","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+131,"IGDETMONH2S","DETECTOR MONOGAS H2S","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+132,"IGDETMONNH3","DETECTOR MONOGAS NH3","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+133,"IGDETMONO","DETECTOR MONOGAS O","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+134,"IGDETMONO2","DETECTOR MONOGAS O2","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+135,"IG-EEBD3L-ST-SM","EQUIPO DE RESPIRACION DE EMERGENCIA ESCAPE RAPIDO. COLINDRO DE FIBRA DE CARBONO Y MASCARA DE CARA COMPLETA 30 MINUTOS","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+136,"IGFFBT37","BOTA BOMBERO T 37","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+137,"IGFFBT38","BOTA BOMBERO T 38","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+138,"IGFFBT40","BOTA BOMBERO T 40","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+139,"IGFFBT41","BOTA BOMBERO T 41","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+140,"IGFFBT42","BOTA BOMBERO T 42","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+141,"IGFFBT43","BOTA BOMBERO T 43","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+142,"IGFFBT44","BOTA BOMBERO T 44","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+143,"IGFFBT45","BOTA BOMBERO T 45","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+144,"IGFFBT46","BOTA BOMBERO T 46","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+145,"IGFFH02","CASCO DE BOMBERO TIPO EUROPEO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+146,"IGFFH03","CASCO DE BOMBERO TIPO KOREANO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+147,"IGFFMONJAB","MONJA BRIGADISTA","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+148,"IGFFMONJAK","MONJA KEVLAR","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+174,"IGHRS-BBTL","TRAJE ALUMINIZADO PARA ALTAS TEMPERATURAS ESPACIO PARA ERA TL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+175,"IGHRS-BBTXL","TRAJE ALUMINIZADO PARA ALTAS TEMPERATURAS ESPACIO PARA ERA TXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+176,"IGHRSTL","TRAJE ALUMINIZADO PARA ALTAS TEMPERATURAS TL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+177,"IGHRSTXL","TRAJE ALUMINIZADO PARA ALTAS TEMPARATURAS TXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+178,"IGHRSTXXL","TRAJE ALUMINIZADO PARA ALTAS TEMPERATURAS TXXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+179,"IGMCH6ET","COMPRESOR ELECTRONICO DE AIRE PORTATIL RC 100L/MIN PESO 39KG","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+180,"IGMCH6SH","COMPRESOR DE GASOLINA DE AIRE PORTATIL RC 100/MIN PESO 39KG","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+181,"IGPANS01AZMTL","PANTALON BOMBERO BRIGADISTA AZUL MARINO TL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+182,"IGPANS01AZMTM","PANTALON BOMBERO BRIGADISTA AZUL MARINO TM","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+183,"IGPANS01AZMTXL","PANTALON BOMBERO BRIGADISTA AZUL MARINO TXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+184,"IGPANS01AZMTXXL","PANTALON BOMBERO BRIGADISTA AZUL MARINO TXXL","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+185,"IGSCBA3LF","EQUIPO RESP. AUTONOMO IGSCBA3LF FIRE FIGHTING  30 MIN.","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+186,"IGSCBA3LI","EQUIPO RESP. AUTONOMO IGSCBA3LI INDUSTRIAL  30 MIN.","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+187,"IGSCBA6LF","EQUIPO RESP. AUTONOMO IGSCBA6LF FIRE FIGHTING  60 MIN.","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+188,"IGSCBA6LFMANDIGMASKH","EQUIPO RESP AUTONOMO FIREFIGHTING 60 MIN MANOMETRO DIGITAL MASCARA SCBA CON LUCES HUD EN EL INTERIOR","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+189,"IGSCBA6LI","EQUIPO RESP. AUTONOMO IGSCBA6LI INDUSTRIAL  60 MIN.","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+190,"IGSTC3LV","CILINDRO FIBRA DE CARBONO 30 MIN","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+191,"IGSTC6LV","CILINDRO FIBRA DE CARBONO 60 MIN","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+192,"IGTIRPAN","TIRANTE PARA PANTALON DE BOMBERO","Equipos SCBA y Respiración Autónoma","Marca AP",SI
+251,"AMB00BL","CUBRE BOCA BICAPA AMBAR 00 BLANCO TERMO-SELLADO","Cubrebocas Desechables","Marca AP",SI
+252,"AMBAR00-3","CUBREBOCAS BLANCO TRICAPA AMBAR 00-3","Cubrebocas Desechables","Marca AP",SI
+267,"TAPAUDAMB","TAPON AUDITIVO REUSABLE CON CORDON TEXTIL AMBAR","Protección Auditiva","Marca AP",SI
+268,"TAPAUDAMBCORDPLA","TAPON AUDITIVO REUSABLE AMBAR CORDON PLASTICO","Protección Auditiva","Marca AP",SI
+269,"TPNAUDCPES","TAPON AUDITIVO CON CORDON DE PLASTICO CON ESTUCHE","Protección Auditiva","Marca AP",SI
+270,"TPNAUDCTES","TAPON AUDITIVO CON CORDON TEXTIL CON ESTUCHE","Protección Auditiva","Marca AP",SI
+277,"D793","CARTUCHO P100 793","Respiradores Reutilizables","Marca AP",SI
+278,"D793C","CARTUCHO P100 793C","Respiradores Reutilizables","Marca AP",SI
+279,"PREFCIRN95","PREFILTRO CIRCULAR N95","Respiradores Reutilizables","Marca AP",SI
+280,"PREFCIRP95","PREFILTRO CIRCULAR P95","Respiradores Reutilizables","Marca AP",SI
+281,"PREFRECN95","PREFILTRO RECTANGULAR N95","Respiradores Reutilizables","Marca AP",SI
+282,"PREFRECP95","PREFILTRO RECTANGULAR P95","Respiradores Reutilizables","Marca AP",SI
+285,"NUQA01","NUQUERA AP","Accesorios para Cabeza","Marca AP",SI
+286,"GUAN01","GUANTE 1/2 ELECTRICISTA PALMA ENTERO CON REFUERZO EXTERIOR","Guantes de Protección","Marca AP",SI
+287,"GUAN02","GUANTE AFELPADO","Guantes de Protección","Marca AP",SI
+288,"GUAN72","GUANTE ALUMINIZADO CARNAZA CON FORRO TERMICO","Guantes de Protección","Marca AP",SI
+289,"GUAN03","GUANTE ALUMINIZADO CON CARNAZA 45 CM","Guantes de Protección","Marca AP",SI
+290,"GUAN04","GUANTE AMBIDIESTRO CON REFUERZO  EXT Y MANGA LARGA","Guantes de Protección","Marca AP",SI
+291,"GUAN05","GUANTE AMBIDIESTRO CON REFUERZO EXT Y MANGA CORTA","Guantes de Protección","Marca AP",SI
+292,"GUAN06","GUANTE AMBIDIESTRO DE PIEL CORRIDO","Guantes de Protección","Marca AP",SI
+293,"GUAN75","GUANTE ANTICORTE PUG 006-T10","Guantes de Protección","Marca AP",SI
+294,"GUAN07","GUANTE ANTICORTE PUG 006-T7","Guantes de Protección","Marca AP",SI
+295,"GUAN08","GUANTE ANTICORTE PUG 006-T8","Guantes de Protección","Marca AP",SI
+296,"GUAN09","GUANTE ANTICORTE PUG 006-T9","Guantes de Protección","Marca AP",SI
+297,"GUAN10","GUANTE ARGENTINO CON PERICO COLOR AZUL","Guantes de Protección","Marca AP",SI
+298,"GUAN11","GUANTE ARGENTINO CON PERICO COLOR NATURAL","Guantes de Protección","Marca AP",SI
+299,"GUAN12","GUANTE ARGENTINO CON PERICO Y SOLAPA COLOR NATURAL","Guantes de Protección","Marca AP",SI
+300,"GUAN13","GUANTE ARGENTINO EN CARNAZA ROJA CON HILO KEVLAR","Guantes de Protección","Marca AP",SI
+301,"GUAN14","GUANTE ARGONERO","Guantes de Protección","Marca AP",SI
+302,"GUAN15","GUANTE ARGONERO TALLA EXTRAGRANDE CON REFUERZO","Guantes de Protección","Marca AP",SI
+303,"GUAN16","GUANTE ARGONERO TALLA GRANDE CON REFUERZO EXTERIOR","Guantes de Protección","Marca AP",SI
+309,"GUAN34","GUANTE DE BOMBERO CARNAZA  AUT-1032-TU","Guantes de Protección","Marca AP",SI
+310,"GUAN76","GUANTE DE CARNAZA TIPO BRIGADISTA CON PUÑO TIPO CALCETIN DE KEVLAR 100% Y FORRO TERMICO (INCLUYE LOGOTIPO EN DORSO)","Guantes de Protección","Marca AP",SI
+311,"MUÑE02","MUÑEQUERA PARA PROTECCION 3IN","Guantes de Protección","Marca AP",SI
+312,"MUÑE01","MUÑEQUERA PARA PROTECCION 4IN","Guantes de Protección","Marca AP",SI
+313,"MANC01","MANGA DE CARNAZA","Protección de Brazos","Marca AP",SI
+314,"MANC02","MANGA DE CARNAZA CON MEDIA ARGOLLA","Protección de Brazos","Marca AP",SI
+315,"POLA01","POLAINA CARNAZA CONVENCIONAL 4 VELCROS","Calzado de Seguridad","Marca AP",SI
+352,"LENT12","LENTE AP CLARO","Protección Visual","Marca AP",SI
+353,"LENT13","LENTE AP OBSCURO","Protección Visual","Marca AP",SI
+354,"MI10W","MICA PARA SOLDADOR SOMBRA 10W","Protección Visual","Marca AP",SI
+355,"MI12W","MICA PARA SOLDAR SOMBRA 12W","Protección Visual","Marca AP",SI
+356,"MI8W","MICA PARA SOLDADOR SOMBRA 8W","Protección Visual","Marca AP",SI
+357,"MITR","MICA PARA SOLDADOR TRANSPARENTE","Protección Visual","Marca AP",SI
+358,"CONO01","CONO 15CM COLOR AZUL","Señalización y Vialidad","Marca AP",SI
+359,"CONO010","CONO 40CM COLOR AMARILLO","Señalización y Vialidad","Marca AP",SI
+360,"CONO011","CONO 40CM COLOR AZUL","Señalización y Vialidad","Marca AP",SI
+361,"CONO012","CONO 40CM COLOR NARANJA","Señalización y Vialidad","Marca AP",SI
+362,"CONO013","CONO 40CM COLOR ROJO","Señalización y Vialidad","Marca AP",SI
+363,"CONO016","CONO 25CM COLOR ROSA","Señalización y Vialidad","Marca AP",SI
+364,"CONO02","CONO 15CM COLOR NARANJA","Señalización y Vialidad","Marca AP",SI
+365,"CONO03","CONO 15CM COLOR ROJO","Señalización y Vialidad","Marca AP",SI
+366,"CONO04","CONO 15CM COLOR AMARILLO","Señalización y Vialidad","Marca AP",SI
+367,"CONO05","CONO 25CM COLOR AMARILLO","Señalización y Vialidad","Marca AP",SI
+368,"CONO06","CONO 25CM COLOR AZUL","Señalización y Vialidad","Marca AP",SI
+369,"CONO07","CONO 25CM COLOR NARANJA","Señalización y Vialidad","Marca AP",SI
+370,"CONO08","CONO 25CM COLOR ROJO","Señalización y Vialidad","Marca AP",SI
+371,"CONO09","CONO 25CM COLOR VERDE","Señalización y Vialidad","Marca AP",SI
+372,"TRAF01","TRAFITAMBO NARANJA 3KG SIN REFLEJANTE","Señalización y Vialidad","Marca AP",SI
+373,"TRAF02","TRAFITAMBO NARANJA 3KG CON REFLEJANTE","Señalización y Vialidad","Marca AP",SI
+374,"TRAF03","TRAFITAMBO NARANJA 5KG SIN REFLEJANTE","Señalización y Vialidad","Marca AP",SI
+375,"TRAF04","TRAFITAMBO NARANJA 5KG CON REFLEJANTE","Señalización y Vialidad","Marca AP",SI
+377,"CAPM01","CAPUCHA DE MEZCLILLA","Accesorios para Cabeza","Comercialización",SI
+378,"COFI01","COFIA PLISADA BLANCA","Accesorios para Cabeza","Comercialización",SI
+379,"COFI02","COFIA VENECIANA BLANCA","Accesorios para Cabeza","Comercialización",SI
+380,"GUAN22","GUANTE CONTRA ACIDOS FROGWEAR CR292 T8","Guantes de Protección","Comercialización",SI
+381,"GUAN23","GUANTE CR 898 MF TALLA 10","Guantes de Protección","Comercialización",SI
+382,"GUAN24","GUANTE CR 898 MF TALLA 7","Guantes de Protección","Comercialización",SI
+383,"GUAN25","GUANTE CR 898 MF TALLA 9","Guantes de Protección","Comercialización",SI
+384,"GUAN26","GUANTE CR611 MF TALLA 10","Guantes de Protección","Comercialización",SI
+385,"GUAN27","GUANTE CR611 MF TALLA 6","Guantes de Protección","Comercialización",SI
+386,"GUAN28","GUANTE CR611 MF TALLA 7","Guantes de Protección","Comercialización",SI
+387,"GUAN29","GUANTE CR611 MF TALLA 8","Guantes de Protección","Comercialización",SI
+388,"GUAN30","GUANTE CR611 MF TALLA 9","Guantes de Protección","Comercialización",SI
+389,"GUAN31","GUANTE CR898 MF TALLA 6","Guantes de Protección","Comercialización",SI
+390,"GUAN32","GUANTE CR898MF TALLA 8","Guantes de Protección","Comercialización",SI
+391,"GUAN35","GUANTE DE IMPACTO SAFE FIT TALLA  8","Guantes de Protección","Comercialización",SI
+392,"GUAN74","GUANTE DE IMPACTO SAFE FIT TALLA  9","Guantes de Protección","Comercialización",SI
+399,"GUAN33","GUANTE JAPONES C/PUNTOS PVC S55D2","Guantes de Protección","Comercialización",SI
+400,"GUAN46","GUANTE LONA TRIPLE PALMA C30 BT","Guantes de Protección","Comercialización",SI
+404,"GUAN77","GUANTE MORADO DE CAUCHO SF 1702XFT 6","Guantes de Protección","Comercialización",SI
+405,"GUAN50","GUANTE MORADO DE CAUCHO SF 1702XFT 8","Guantes de Protección","Comercialización",SI
+406,"GUAN51","GUANTE MORADO DE CAUCHO SF 1702XFT 9","Guantes de Protección","Comercialización",SI
+407,"GUAN52","GUANTE MORADO DE CAUCHO SF-1702XFT 7","Guantes de Protección","Comercialización",SI
+408,"GUAN53","GUANTE MUSTANG COLOR NATURAL CON TELA AZUL MARINO","Guantes de Protección","Comercialización",SI
+409,"GUAN54","GUANTE MUSTANG COLOR NEGRO CON TELA NARANJA","Guantes de Protección","Comercialización",SI
+410,"GUAN55","GUANTE MUSTANG DE CARNAZA PARA DAMA","Guantes de Protección","Comercialización",SI
+411,"GUAN39","GUANTE NITRILO 705 PFE TALLA L","Guantes de Protección","Comercialización",SI
+412,"GUAN38","GUANTE NITRILO 705 PFE TALLA M","Guantes de Protección","Comercialización",SI
+413,"GUAN37","GUANTE NITRILO 705 PFE TALLA S","Guantes de Protección","Comercialización",SI
+414,"GUAN56","GUANTE NYLON NEGRO NITRILO EPM SF1339 TALLA 6","Guantes de Protección","Comercialización",SI
+415,"GUAN57","GUANTE NYLON NEGRO NITRILO EPM SF1339 TALLA 7","Guantes de Protección","Comercialización",SI
+416,"GUAN58","GUANTE NYLON NEGRO NITRILO EPM SF1339 TALLA 8","Guantes de Protección","Comercialización",SI
+417,"GUAN59","GUANTE NYLON NEGRO NITRILO EPM SF1339 TALLA 9","Guantes de Protección","Comercialización",SI
+419,"GUAN60","GUANTE PUG 111S TALLA 10","Guantes de Protección","Comercialización",SI
+420,"GUAN61","GUANTE PUG 111S TALLA 6","Guantes de Protección","Comercialización",SI
+421,"GUAN62","GUANTE PUG 111S TALLA 7","Guantes de Protección","Comercialización",SI
+422,"GUAN63","GUANTE PUG 111S TALLA 8","Guantes de Protección","Comercialización",SI
+423,"GUAN64","GUANTE PUG 111S TALLA 9","Guantes de Protección","Comercialización",SI
+424,"GUAN65","GUANTE ROJO DE CAUCHO SF 1700MF TALLA 8","Guantes de Protección","Comercialización",SI
+425,"GUAN66","GUANTE TERMOPLASTICO DE ELASTOMERO 8600 T S","Guantes de Protección","Comercialización",SI
+426,"GUAN67","GUANTE TERMOPLASTICO DE ELASTOMERO 8600 T XL","Guantes de Protección","Comercialización",SI
+427,"GUAN68","GUANTE TERMOPLASTICO DE ELASTOMERO 8600 T. L.","Guantes de Protección","Comercialización",SI
+428,"GUAN69","GUANTE TERMOPLASTICO DE ELASTOMERO 8600 T. M","Guantes de Protección","Comercialización",SI
+429,"GUAN70","GUANTE TIPO AMERICANO","Guantes de Protección","Comercialización",SI
+431,"GUAN78","GUANTE TRIPLE PALMA C30BT","Guantes de Protección","Comercialización",SI
+432,"GUAN71","GUANTELETA DE PIEL","Guantes de Protección","Comercialización",SI
+433,"MANC03","MANGA KEVLAR 18"SXA9378T MCR","Protección de Brazos","Comercialización",SI
+436,"BOTA06","BORCEGUI MODELO SFK63 TALLA 23","Calzado de Seguridad","Comercialización",SI
+437,"BOTA07","BORCEGUI MODELO SFK63 TALLA 26","Calzado de Seguridad","Comercialización",SI
+438,"BOTA08","BORCEGUI MODELO SFK63 TALLA 27","Calzado de Seguridad","Comercialización",SI
+439,"BOTA09","BORCEGUI MODELO SFK63 TALLA 28","Calzado de Seguridad","Comercialización",SI
+440,"BOTA10","BORCEGUI MODELO SFK63 TALLA 29","Calzado de Seguridad","Comercialización",SI
+441,"BOTA16","BOTA DE HULE TALLA 3","Calzado de Seguridad","Comercialización",SI
+447,"BOTA11","BOTA PANTALONERA TALLA 23","Calzado de Seguridad","Comercialización",SI
+448,"BOTA12","BOTA PANTALONERA TALLA 26","Calzado de Seguridad","Comercialización",SI
+449,"BOTA13","BOTA PANTALONERA TALLA 27","Calzado de Seguridad","Comercialización",SI
+450,"BOTA14","BOTA PANTALONERA TALLA 28","Calzado de Seguridad","Comercialización",SI
+451,"BOTA15","BOTA PANTALONERA TALLA 29","Calzado de Seguridad","Comercialización",SI
+452,"CALZ12","CALZADO ARENA NOBUCK SF-B2010 T22","Calzado de Seguridad","Comercialización",SI
+453,"CALZ13","CALZADO ARENA NOBUCK SF-B2010 T23","Calzado de Seguridad","Comercialización",SI
+454,"CALZ14","CALZADO ARENA NOBUCK SF-B2010 T24","Calzado de Seguridad","Comercialización",SI
+455,"CALZ01","CALZADO ARENA NOBUCK SF-B2010 T25","Calzado de Seguridad","Comercialización",SI
+456,"CALZ02","CALZADO ARENA NOBUCK SF-B2010 T26","Calzado de Seguridad","Comercialización",SI
+457,"CALZ03","CALZADO ARENA NOBUCK SF-B2010 T27","Calzado de Seguridad","Comercialización",SI
+458,"CALZ15","CALZADO ARENA NOBUCK SF-B2010 T28","Calzado de Seguridad","Comercialización",SI
+459,"CALZ16","CALZADO ARENA NOBUCK SF-B2010 T29","Calzado de Seguridad","Comercialización",SI
+460,"CALZ17","CALZADO ARENA NOBUCK SF-B2010 T31","Calzado de Seguridad","Comercialización",SI
+461,"CALZ08","CALZADO BULL RETYVER SKU295226 #6","Calzado de Seguridad","Comercialización",SI
+462,"CALZ09","CALZADO BULL RETYVER SKU295226 #7","Calzado de Seguridad","Comercialización",SI
+463,"CALZ10","CALZADO BULL RETYVER SKU295226 #8","Calzado de Seguridad","Comercialización",SI
+464,"CALZ11","CALZADO BULL RETYVER SKU295226 #9","Calzado de Seguridad","Comercialización",SI
+465,"CALZ023","CALZADO SF-350 AN T-2","Calzado de Seguridad","Comercialización",SI
+466,"CALZ024","CALZADO SF-350 AN T-3","Calzado de Seguridad","Comercialización",SI
+467,"CALZ031","CALZADO SF-350 AN T-30","Calzado de Seguridad","Comercialización",SI
+468,"CALZ025","CALZADO SF-350 AN T-4","Calzado de Seguridad","Comercialización",SI
+469,"CALZ026","CALZADO SF-350 AN T-5","Calzado de Seguridad","Comercialización",SI
+470,"CALZ027","CALZADO SF-350 AN T-6","Calzado de Seguridad","Comercialización",SI
+471,"CALZ028","CALZADO SF-350 AN T-7","Calzado de Seguridad","Comercialización",SI
+472,"CALZ029","CALZADO SF-350 AN T-8","Calzado de Seguridad","Comercialización",SI
+473,"CALZ030","CALZADO SF-350 AN T-9","Calzado de Seguridad","Comercialización",SI
+474,"CALZ18","CALZADO SF-350 T6","Calzado de Seguridad","Comercialización",SI
+475,"CALZ20","CALZADO SF-350 T7","Calzado de Seguridad","Comercialización",SI
+476,"CALZ19","CALZADO SF-350 T8","Calzado de Seguridad","Comercialización",SI
+477,"CALZ022","CALZADO TITANIUM RETYVER SKU32645 #10","Calzado de Seguridad","Comercialización",SI
+478,"CALZ021","CALZADO TITANIUM RETYVER SKU32645 #4","Calzado de Seguridad","Comercialización",SI
+479,"CALZ04","CALZADO TITANIUM RETYVER SKU32645 #6","Calzado de Seguridad","Comercialización",SI
+480,"CALZ05","CALZADO TITANIUM RETYVER SKU32645 #7","Calzado de Seguridad","Comercialización",SI
+481,"CALZ06","CALZADO TITANIUM RETYVER SKU32645 #8","Calzado de Seguridad","Comercialización",SI
+482,"CALZ07","CALZADO TITANIUM RETYVER SKU32645 #9","Calzado de Seguridad","Comercialización",SI
+483,"POLA02","POLAINA ALUMINIZADA CON FORRO ALGODON","Calzado de Seguridad","Comercialización",SI
+485,"CAMI05","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 28","Ropa de Protección","Comercialización",SI
+486,"CAMI06","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 30","Ropa de Protección","Comercialización",SI
+487,"CAMI07","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 32","Ropa de Protección","Comercialización",SI
+488,"CAMI08","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 34","Ropa de Protección","Comercialización",SI
+489,"CAMI09","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 36","Ropa de Protección","Comercialización",SI
+490,"CAMI10","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 38","Ropa de Protección","Comercialización",SI
+491,"CAMI11","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 40","Ropa de Protección","Comercialización",SI
+492,"CAMI12","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 42","Ropa de Protección","Comercialización",SI
+493,"CAMI13","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 46","Ropa de Protección","Comercialización",SI
+494,"CAMI14","CAGAMOSH CAMISOLA 100% ALGODON AZUL MARINO TALLA 48","Ropa de Protección","Comercialización",SI
+495,"CAMI01","CAMISOLA DE MEZCLILLA CON REFLEJANTE T CHICA","Ropa de Protección","Comercialización",SI
+496,"CAMI02","CAMISOLA DE MEZCLILLA CON REFLEJANTE T EXTRAGRANDE","Ropa de Protección","Comercialización",SI
+497,"CAMI03","CAMISOLA DE MEZCLILLA CON REFLEJANTE T GRANDE","Ropa de Protección","Comercialización",SI
+498,"CAMI04","CAMISOLA DE MEZCLILLA CON REFLEJANTE T MEDIANA","Ropa de Protección","Comercialización",SI
+506,"MAND01","MANDIL ALUMINIZADO","Ropa de Protección","Comercialización",SI
+507,"MAND02","MANDIL DE CARNAZA 60X90","Ropa de Protección","Comercialización",SI
+508,"MAND03","MANDIL RAYON ALUMINIZADO 60X90 CMS RESPALDO DE ALGODON","Ropa de Protección","Comercialización",SI
+517,"PANTA01","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 28","Ropa de Protección","Comercialización",SI
+518,"PANTA02","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 30","Ropa de Protección","Comercialización",SI
+519,"PANTA03","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 32","Ropa de Protección","Comercialización",SI
+520,"PANTA04","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 34","Ropa de Protección","Comercialización",SI
+521,"PANTA05","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 36","Ropa de Protección","Comercialización",SI
+522,"PANTA06","PAGAMOAA PANTALON 100% ALGODON AZUL MARINO TALLA 38","Ropa de Protección","Comercialización",SI
+523,"TIRA01","TIRANTE NARANJA CON REFLEJANTE","Ropa de Protección","Comercialización",SI
+524,"TAPAUDHHN33","TAPON AUDITIVO HHN33","Protección Auditiva","Comercialización",SI
+525,"ANTI01","ANTIFAZ DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+526,"ARNE03","ARNES DP 500","Accesorios y Refacciones","Comercialización",SI
+527,"ARNE02","ARNES DP 600","Accesorios y Refacciones","Comercialización",SI
+528,"ARNE01","ARNES DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+529,"ARNE04","ARNES PARA FULL FACE DP1601","Accesorios y Refacciones","Comercialización",SI
+530,"ARNE05","ARNES PARA FULL FACE DP1602","Accesorios y Refacciones","Comercialización",SI
+531,"ARNE06","ARNES REFLEJANTE AMARILLO NEON (CARRILERO)","Accesorios y Refacciones","Comercialización",SI
+532,"ARO02","ARO EMPAQUE GRANDE NARANJA","Accesorios y Refacciones","Comercialización",SI
+533,"ARO01","ARO EMPAQUE PEQUEÑO NARANJA","Accesorios y Refacciones","Comercialización",SI
+534,"VALV11","BLUE LATEX RUBBER 150-7 (S)","Accesorios y Refacciones","Comercialización",SI
+535,"BROC05","BROCHE HEMBRA TRANSPARANTE  PARA DP600","Accesorios y Refacciones","Comercialización",SI
+536,"BROC04","BROCHE MACHO TRANSPARENTE PARA DP600","Accesorios y Refacciones","Comercialización",SI
+537,"BROC02","BROCHE MARIPOSA COLOR AMARILLO","Accesorios y Refacciones","Comercialización",SI
+538,"BROC01","BROCHE MARIPOSA COLOR VERDE","Accesorios y Refacciones","Comercialización",SI
+539,"BROC06","BROCHE PARA BARBIQUEJO (HEMBRA  MACHO)","Accesorios y Refacciones","Comercialización",SI
+540,"BROC03","BROCHE TRANSPARANTE PARA DP600 DP500","Accesorios y Refacciones","Comercialización",SI
+541,"BROC07","BROCHES PARA ARNES DP1601","Accesorios y Refacciones","Comercialización",SI
+542,"CAPU01","CAPUCHON DP01  DP02","Accesorios y Refacciones","Comercialización",SI
+543,"CART02","CARCASA CARTUCHO 793","Accesorios y Refacciones","Comercialización",SI
+544,"CARR01","CARRETE CENTRAL DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+545,"CARR02","CARRETE PORTA CARTUCHO DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+546,"CART01","CARTUCHO PARA PROCESAR","Accesorios y Refacciones","Comercialización",SI
+547,"COPA01","COPA NASAL DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+548,"COPA02","COPA NASAL DP600 TALLA M","Accesorios y Refacciones","Comercialización",SI
+549,"TAFPF01","DIADEMA PARA PROTECTOR FACIAL","Accesorios y Refacciones","Comercialización",SI
+550,"DISC03","DISCO ADAPTADOR TRANSPARENTE 1906 1901","Accesorios y Refacciones","Comercialización",SI
+551,"DISC02","DISCO DE ESTRELLA","Accesorios y Refacciones","Comercialización",SI
+552,"DISC01","DISCO ROSCADO","Accesorios y Refacciones","Comercialización",SI
+553,"ESTUCH01","ESTUCHE PLASTICO PARA TAPON AMBAR","Accesorios y Refacciones","Comercialización",SI
+554,"GANB01","GANCHO PARA BARBIQUEJO NEGRO","Accesorios y Refacciones","Comercialización",SI
+555,"GRAP02","GRAPA BROCHE HEMBRA (MEDIA CARA DP01 DP02)","Accesorios y Refacciones","Comercialización",SI
+556,"GRAP03","GRAPA BROCHE HEMBRA BLANCO P/ RESPIRADOR","Accesorios y Refacciones","Comercialización",SI
+557,"GRAP01","GRAPA BROCHE MACHO (MEDIA CARA DP01 DP02)","Accesorios y Refacciones","Comercialización",SI
+558,"GRAP04","GRAPA BROCHE MACHO BLANCO P/ RESPIRADOR","Accesorios y Refacciones","Comercialización",SI
+559,"GUOR01","GUARDAOREJAS AMBAR","Accesorios y Refacciones","Comercialización",SI
+560,"HEBI01","HEBILLA PARA BARBIQUEJO DE 3 PUNTOS NEGRO (3/4)","Accesorios y Refacciones","Comercialización",SI
+561,"VALV09","LATEX VALVULA DE INHALACION PARA FULLFACE Y MEDIA CARA","Accesorios y Refacciones","Comercialización",SI
+562,"SUJE01","SUJETADOR PARA CASCO","Accesorios y Refacciones","Comercialización",SI
+563,"TAFI01","TAFILETE PARA CASCO INTERVALO NEGRO","Accesorios y Refacciones","Comercialización",SI
+564,"TAPA01","TAPA FRONTAL DP600","Accesorios y Refacciones","Comercialización",SI
+566,"VALV01","VALVULA BLANCA SIN LOGO LINER ALTO","Accesorios y Refacciones","Comercialización",SI
+567,"VALV02","VALVULA BLANCA SIN LOGO LINER BAJO","Accesorios y Refacciones","Comercialización",SI
+568,"VALV06","VALVULA CENTRAL GRIS DP01 DP02","Accesorios y Refacciones","Comercialización",SI
+569,"VALV10","VALVULA DE EXHALACION DP600","Accesorios y Refacciones","Comercialización",SI
+570,"VALV07","VALVULA DE INHALACION DP600","Accesorios y Refacciones","Comercialización",SI
+571,"VALV03","VALVULA GRIS CON LOGO LINER ALTO","Accesorios y Refacciones","Comercialización",SI
+572,"VALV04","VALVULA GRIS CON LOGO LINER BAJO","Accesorios y Refacciones","Comercialización",SI
+573,"VALV08","VALVULA TRANSPARENTE LINER BAJO","Accesorios y Refacciones","Comercialización",SI
+574,"VALV05","VALVULA TRANSPARENTE SIN LOGO LINER ALTO","Accesorios y Refacciones","Comercialización",SI
+575,"BAND03","BANDEROLA 50X42 BIES AMARILLO ALTA VISIBILIDAD VASTAGO DE MADERA","Señalización y Vialidad","Comercialización",SI
+576,"BAND01","BANDEROLAS LONA COLOR NARANJA CON REFLEJATE","Señalización y Vialidad","Comercialización",SI
+577,"BAND02","BANDEROLAS MALLA COLOR NARANJA CON REFLEJATE","Señalización y Vialidad","Comercialización",SI
+578,"TACC01","TACON PARA CAMION","Señalización y Vialidad","Comercialización",SI
+579,"TACC02","TACON PARA CAMION.","Señalización y Vialidad","Comercialización",SI
+580,"LENT12","LENTE AP CLARO","Protección Visual","Comercialización",SI
+581,"LENT13","LENTE AP OBSCURO","Protección Visual","Comercialización",SI
+582,"MICA03","MICA PARA PROTECTOR FACIAL PET","Protección Visual","Comercialización",SI
+583,"MI10W","MICA PARA SOLDADOR SOMBRA 10W","Protección Visual","Comercialización",SI
+584,"MI8W","MICA PARA SOLDADOR SOMBRA 8W","Protección Visual","Comercialización",SI
+585,"MITR","MICA PARA SOLDADOR TRANSPARENTE","Protección Visual","Comercialización",SI
+586,"MI12W","MICA PARA SOLDAR SOMBRA 12W","Protección Visual","Comercialización",SI
+587,"MICA02","MICA PROTECTORA ADHESIVO PARA FULL FACE","Protección Visual","Comercialización",SI
+588,"MICA01","MICAS AZULES PARA PROTECTOR FACIAL","Protección Visual","Comercialización",SI
+589,"MICA04","REPUESTO MICA PARA CARETA MEDICA ADULTO","Protección Visual","Comercialización",SI
+590,"MICA05","REPUESTO MICA PARA FULL FACE 1601","Protección Visual","Comercialización",SI
+591,"MICA06","REPUESTO MICA PARA FULL FACE 1602","Protección Visual","Comercialización",SI
