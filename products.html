@@ -968,7 +968,17 @@
         // Función para manejar cambios de hash en la URL
         function handleHashChange() {
             if (window.location.hash) {
-                const hashCategory = window.location.hash.substring(1);
+                let hashCategory = window.location.hash.substring(1);
+                // Mapeo de alias para URLs amigables
+                const categoryAliases = {
+                    'cascos': 'cabeza',
+                    'cascos-seguridad': 'cabeza',
+                    'proteccion-cabeza': 'cabeza',
+                    'respiradores': 'respiradores-n95',
+                    'lentes': 'proteccion-visual',
+                    'tapones': 'proteccion-auditiva'
+                };
+                hashCategory = categoryAliases[hashCategory] || hashCategory;
                 const categoryTab = document.querySelector(`.category-tab[data-category="${hashCategory}"]`);
                 if (categoryTab) {
                     document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'));

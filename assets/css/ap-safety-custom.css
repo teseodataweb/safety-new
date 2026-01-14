@@ -40,6 +40,38 @@
     box-shadow: 0 10px 20px var(--ap-sombra);
 }
 
+/* Botones Outline/Secondary - Con fondo transparente */
+.thm-btn[style*="background: transparent"],
+.thm-btn[style*="background:transparent"],
+.thm-btn.thm-btn-outline {
+    background: transparent !important;
+    border: 2px solid var(--ap-verde-corporativo, #00a651) !important;
+    color: var(--ap-verde-corporativo, #00a651) !important;
+}
+
+.thm-btn[style*="background: transparent"]:hover,
+.thm-btn[style*="background:transparent"]:hover,
+.thm-btn.thm-btn-outline:hover {
+    background: var(--ap-verde-corporativo, #00a651) !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* Botones con fondo blanco en CTAs */
+.thm-btn[style*="background: white"],
+.thm-btn[style*="background:white"] {
+    background: white !important;
+    background-color: white !important;
+    color: var(--ap-verde-corporativo, #00a651) !important;
+    border: none !important;
+}
+
+.thm-btn[style*="background: white"]:hover,
+.thm-btn[style*="background:white"]:hover {
+    background: #f5f5f5 !important;
+    color: var(--ap-verde-oscuro, #008c44) !important;
+}
+
 /* Headers y títulos */
 h1, h4, h5, h6 {
     color: var(--ap-negro-principal) !important;
@@ -312,6 +344,72 @@ h3{
 .services-three__icon {
     color: var(--ap-verde-corporativo) !important;
     font-size: 60px;
+}
+
+/* Fix para iconos en páginas de Industrias - Sección Normatividad */
+.services-page .services-three__single,
+section.services-three .services-three__single {
+    position: relative !important;
+    padding: 25px !important;
+    margin-left: 0 !important;
+    overflow: visible !important;
+}
+
+.services-page .services-three__icon,
+section.services-three .services-three__icon {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    height: auto !important;
+    width: auto !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    display: block !important;
+    margin-bottom: 15px !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+}
+
+.services-page .services-three__icon i,
+section.services-three .services-three__icon i {
+    font-size: 40px !important;
+    color: var(--ap-verde-corporativo, #00a651) !important;
+    display: block !important;
+    position: relative !important;
+}
+
+/* Ocultar todos los pseudo-elementos */
+.services-page .services-three__icon::before,
+section.services-three .services-three__icon::before,
+.services-page .services-three__icon::after,
+section.services-three .services-three__icon::after,
+.services-page .services-three__single::before,
+section.services-three .services-three__single::before,
+.services-page .services-three__single::after,
+section.services-three .services-three__single::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Ocultar shapes decorativas */
+.services-page .services-three__shape-1,
+.services-page .services-three__shape-2,
+section.services-three .services-three__shape-1,
+section.services-three .services-three__shape-2 {
+    display: none !important;
 }
 
 .services-three__single:hover .services-three__icon {
@@ -849,19 +947,48 @@ button[style*="background: #f36f21"]:hover,
    Issue D1.7 - Iconos más representativos
    ======================================== */
 
+.feature-one__single {
+    padding: 30px 15px !important;
+    text-align: center !important;
+}
+
+.feature-one__icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 auto 15px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 .feature-one__icon i.fas,
 .feature-one__icon i.fab,
 .feature-one__icon i.far {
-    font-size: 55px !important;
+    font-size: 32px !important;
     color: var(--ap-verde-corporativo) !important;
     line-height: 1 !important;
     display: inline-block !important;
     transition: all 0.3s ease !important;
 }
 
+.feature-one__single:hover {
+    background: var(--ap-verde-corporativo) !important;
+    background-color: var(--ap-verde-corporativo) !important;
+}
+
 .feature-one__single:hover .feature-one__icon i {
-    color: var(--ap-verde-oscuro) !important;
+    color: white !important;
     transform: scale(1.1) !important;
+}
+
+.feature-one__title a {
+    font-weight: 300 !important;
+}
+
+.feature-one__single:hover .feature-one__title a {
+    color: white !important;
 }
 
 /* ========================================
@@ -1440,4 +1567,15 @@ button[style*="background: #f36f21"]:hover,
     color: #ffffff !important;
     line-height: 1 !important;
     display: inline-block !important;
+}
+
+/* =====================================================
+   OCULTAR: Botón flotante de chat
+   ===================================================== */
+.chat-icon,
+.chat-popup,
+#chat-popup {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
