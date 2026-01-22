@@ -251,6 +251,36 @@
     display: block;
 }
 
+/* INICIO DE ESTILOS CARRUSEL */
+/* ESTILOS CARUSEL  */
+.carrusel {
+    padding-top: 5%;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1300px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    margin-top:0;
+  }
+.carrusel-track{
+    display: flex;
+    
+    animation: scroll 10s linear infinite;
+}
+.carrusel-track img {
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    margin: 0 50px;
+    padding: auto;
+    border-radius: 8px;
+  }
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+/* FIN DE ESTILOS CARRUSEL */
+
 .main-slider__btn .thm-btn:hover {
     color: var(--fixpro-base);
 }
